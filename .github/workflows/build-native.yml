@@ -27,6 +27,8 @@ jobs:
         pip install -e . --quiet
         
     - name: Build native executable
+      env:
+        PYTHONUTF8: "1"
       run: python native_app/build_native.py
       
     - name: Verify EXE created
