@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ============================================================ -->
+    <!-- AMENITIES DE DEMO                                              -->
+    <!-- ============================================================ -->
+    <record id="amenity_pileta" model="inmobiliaria.amenity">
+        <field name="name">Pileta / Piscina</field>
+        <field name="icon">fa-swimming-pool</field>
+        <field name="category">building</field>
+        <field name="is_premium">True</field>
+        <field name="sequence">10</field>
+    </record>
+
+    <record id="amenity_gimnasio" model="inmobiliaria.amenity">
+        <field name="name">Gimnasio / Fitness Center</field>
+        <field name="icon">fa-dumbbell</field>
+        <field name="category">building</field>
+        <field name="is_premium">True</field>
+        <field name="sequence">20</field>
+    </record>
+
+    <record id="amenity_sum" model="inmobiliaria.amenity">
+        <field name="name">SUM / Salón de Usos Múltiples</field>
+        <field name="icon">fa-users</field>
+        <field name="category">building</field>
+        <field name="is_premium">True</field>
+        <field name="sequence">30</field>
+    </record>
+
+    <record id="amenity_parrilla" model="inmobiliaria.amenity">
+        <field name="name">Parrilla / Quincho</field>
+        <field name="icon">fa-fire</field>
+        <field name="category">building</field>
+        <field name="is_premium">False</field>
+        <field name="sequence">40</field>
+    </record>
+
+    <record id="amenity_laundry" model="inmobiliaria.amenity">
+        <field name="name">Laundry / Lavandería</field>
+        <field name="icon">fa-tshirt</field>
+        <field name="category">building</field>
+        <field name="is_premium">False</field>
+        <field name="sequence">50</field>
+    </record>
+
+    <record id="amenity_cochera" model="inmobiliaria.amenity">
+        <field name="name">Cochera / Estacionamiento</field>
+        <field name="icon">fa-car</field>
+        <field name="category">building</field>
+        <field name="is_premium">True</field>
+        <field name="sequence">60</field>
+    </record>
+
+    <record id="amenity_bicicletas" model="inmobiliaria.amenity">
+        <field name="name">Bicicletero</field>
+        <field name="icon">fa-bicycle</field>
+        <field name="category">building</field>
+        <field name="is_premium">False</field>
+        <field name="sequence">70</field>
+    </record>
+
+    <record id="amenity_seguridad24" model="inmobiliaria.amenity">
+        <field name="name">Seguridad 24hs / Portería</field>
+        <field name="icon">fa-shield-alt</field>
+        <field name="category">security</field>
+        <field name="is_premium">True</field>
+        <field name="sequence">80</field>
+    </record>
+
+    <record id="amenity_cctv" model="inmobiliaria.amenity">
+        <field name="name">Cámaras de Seguridad</field>
+        <field name="icon">fa-video</field>
+        <field name="category">security</field>
+        <field name="is_premium">False</field>
+        <field name="sequence">90</field>
+    </record>
+
+    <record id="amenity_wifi" model="inmobiliaria.amenity">
+        <field name="name">WiFi en Áreas Comunes</field>
+        <field name="icon">fa-wifi</field>
+        <field name="category">services</field>
+        <field name="is_premium">False</field>
+        <field name="sequence">100</field>
+    </record>
+
+    <record id="amenity_solarium" model="inmobiliaria.amenity">
+        <field name="name">Solarium / Terraza</field>
+        <field name="icon">fa-sun</field>
+        <field name="category">green</field>
+        <field name="is_premium">True</field>
+        <field name="sequence">110</field>
+    </record>
+
+    <record id="amenity_jardin" model="inmobiliaria.amenity">
+        <field name="name">Jardín / Espacio Verde</field>
+        <field name="icon">fa-tree</field>
+        <field name="category">green</field>
+        <field name="is_premium">False</field>
+        <field name="sequence">120</field>
+    </record>
+
+    <record id="amenity_juegos" model="inmobiliaria.amenity">
+        <field name="name">Juegos para Niños</field>
+        <field name="icon">fa-child</field>
+        <field name="category">green</field>
+        <field name="is_premium">False</field>
+        <field name="sequence">130</field>
+    </record>
+
+    <record id="amenity_subte" model="inmobiliaria.amenity">
+        <field name="name">Cercano a Subte/Tren</field>
+        <field name="icon">fa-subway</field>
+        <field name="category">transport</field>
+        <field name="is_premium">False</field>
+        <field name="sequence">140</field>
+    </record>
+
+    <record id="amenity_colectivos" model="inmobiliaria.amenity">
+        <field name="name">Líneas de Colectivo</field>
+        <field name="icon">fa-bus</field>
+        <field name="category">transport</field>
+        <field name="is_premium">False</field>
+        <field name="sequence">150</field>
+    </record>
+
+    <record id="amenity_aire" model="inmobiliaria.amenity">
+        <field name="name">Aire Acondicionado Central</field>
+        <field name="icon">fa-snowflake</field>
+        <field name="category">apartment</field>
+        <field name="is_premium">True</field>
+        <field name="sequence">160</field>
+    </record>
+
+    <record id="amenity_balcon" model="inmobiliaria.amenity">
+        <field name="name">Balcón / Terraza Privada</field>
+        <field name="icon">fa-window-maximize</field>
+        <field name="category">apartment</field>
+        <field name="is_premium">False</field>
+        <field name="sequence">170</field>
+    </record>
+
+    <record id="amenity_lavadero" model="inmobiliaria.amenity">
+        <field name="name">Lavadero Independiente</field>
+        <field name="icon">fa-tint</field>
+        <field name="category">apartment</field>
+        <field name="is_premium">False</field>
+        <field name="sequence">180</field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- BARRIOS DE DEMO (CABA - BUENOS AIRES)                          -->
+    <!-- ============================================================ -->
+    <record id="city_caba" model="res.city">
+        <field name="name">Ciudad Autónoma de Buenos Aires</field>
+        <field name="state_id" ref="base.state_ar_c"/>
+        <field name="zipcode">C1000</field>
+    </record>
+
+    <record id="neigh_palermo" model="inmobiliaria.neighborhood">
+        <field name="name">Palermo</field>
+        <field name="code">PAL</field>
+        <field name="city_id" ref="city_caba"/>
+        <field name="zip_code">1425</field>
+        <field name="latitude">-34.5711</field>
+        <field name="longitude">-58.4233</field>
+        <field name="description">Barrio trendy con parques, restaurantes, vida nocturna y excelentes conexiones de subte (Línea D).</field>
+        <field name="featured">True</field>
+    </record>
+
+    <record id="neigh_recoleta" model="inmobiliaria.neighborhood">
+        <field name="name">Recoleta</field>
+        <field name="code">REC</field>
+        <field name="city_id" ref="city_caba"/>
+        <field name="zip_code">1113</field>
+        <field name="latitude">-34.5883</field>
+        <field name="longitude">-58.3926</field>
+        <field name="description">Barrio elegante y residencial, zona de embajadas, museos y arquitectura francesa.</field>
+        <field name="featured">True</field>
+    </record>
+
+    <record id="neigh_puerto_madero" model="inmobiliaria.neighborhood">
+        <field name="name">Puerto Madero</field>
+        <field name="code">PMD</field>
+        <field name="city_id" ref="city_caba"/>
+        <field name="zip_code">1107</field>
+        <field name="latitude">-34.6107</field>
+        <field name="longitude">-58.3626</field>
+        <field name="description">Barrio moderno junto al río, torres de lujo, restaurantes premium y oficinas corporativas.</field>
+        <field name="featured">True</field>
+    </record>
+
+    <record id="neigh_belgrano" model="inmobiliaria.neighborhood">
+        <field name="name">Belgrano</field>
+        <field name="code">BEL</field>
+        <field name="city_id" ref="city_caba"/>
+        <field name="zip_code">1428</field>
+        <field name="latitude">-34.5587</field>
+        <field name="longitude">-58.4538</field>
+        <field name="description">Barrio residencial familiar, buena conectividad (subte D, tren Mitre), zonas comerciales.</field>
+        <field name="featured">True</field>
+    </record>
+
+    <record id="neigh_caballito" model="inmobiliaria.neighborhood">
+        <field name="name">Caballito</field>
+        <field name="code">CAB</field>
+        <field name="city_id" ref="city_caba"/>
+        <field name="zip_code">1424</field>
+        <field name="latitude">-34.6145</field>
+        <field name="longitude">-58.4435</field>
+        <field name="description">Barrio central, muy residencial, excelente conectividad (subte A, E, H, tren Sarmiento).</field>
+        <field name="featured">False</field>
+    </record>
+
+    <record id="neigh_villa_crespo" model="inmobiliaria.neighborhood">
+        <field name="name">Villa Crespo</field>
+        <field name="code">VCR</field>
+        <field name="city_id" ref="city_caba"/>
+        <field name="zip_code">1414</field>
+        <field name="latitude">-34.5991</field>
+        <field name="longitude">-58.4422</field>
+        <field name="description">Barrio en auge, cercano a Palermo, buena gastronomía, subte B y H.</field>
+        <field name="featured">False</field>
+    </record>
+
+    <record id="neigh_san_telmo" model="inmobiliaria.neighborhood">
+        <field name="name">San Telmo</field>
+        <field name="code">STE</field>
+        <field name="city_id" ref="city_caba"/>
+        <field name="zip_code">1064</field>
+        <field name="latitude">-34.6213</field>
+        <field name="longitude">-58.3735</field>
+        <field name="description">Barrio histórico, casco antiguo, mercado de antigüedades, turismo y vida bohemia.</field>
+        <field name="featured">False</field>
+    </record>
+
+    <record id="neigh_nunez" model="inmobiliaria.neighborhood">
+        <field name="name">Núñez</field>
+        <field name="code">NUN</field>
+        <field name="city_id" ref="city_caba"/>
+        <field name="zip_code">1429</field>
+        <field name="latitude">-34.5465</field>
+        <field name="longitude">-58.4583</field>
+        <field name="description">Barrio residencial tranquilo, cercano a río, universidad, tren Mitre y subte D.</field>
+        <field name="featured">False</field>
+    </record>
+
+    <record id="neigh_colegiales" model="inmobiliaria.neighborhood">
+        <field name="name">Colegiales</field>
+        <field name="code">COL</field>
+        <field name="city_id" ref="city_caba"/>
+        <field name="zip_code">1426</field>
+        <field name="latitude">-34.5798</field>
+        <field name="longitude">-58.4523</field>
+        <field name="description">Barrio tranquilo, familiar, cercano a Palermo, subte B y tren Mitre.</field>
+        <field name="featured">False</field>
+    </record>
+
+    <record id="neigh_chacarita" model="inmobiliaria.neighborhood">
+        <field name="name">Chacarita</field>
+        <field name="code">CHA</field>
+        <field name="city_id" ref="city_caba"/>
+        <field name="zip_code">1419</field>
+        <field name="latitude">-34.5889</field>
+        <field name="longitude">-58.4492</field>
+        <field name="description">Barrio en transformación, cementerios históricos, nueva movida gastronómica.</field>
+        <field name="featured">False</field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- TAGS ADICIONALES                                               -->
+    <!-- ============================================================ -->
+    <record id="tag_pto_credito" model="real.estate.property.tag">
+        <field name="name">Acepta Crédito</field>
+        <field name="color">10</field>
+        <field name="tag_category">financial</field>
+        <field name="is_filterable">True</field>
+        <field name="show_on_card">True</field>
+    </record>
+
+    <record id="tag_entrega" model="real.estate.property.tag">
+        <field name="name">Financiación Propietario</field>
+        <field name="color">9</field>
+        <field name="tag_category">financial</field>
+        <field name="is_filterable">True</field>
+        <field name="show_on_card">True</field>
+    </record>
+
+    <record id="tag_estreno" model="real.estate.property.tag">
+        <field name="name">A Estrenar</field>
+        <field name="color">3</field>
+        <field name="tag_category">condition</field>
+        <field name="is_filterable">True</field>
+        <field name="show_on_card">True</field>
+    </record>
+
+    <record id="tag_reciclado" model="real.estate.property.tag">
+        <field name="name">Reciclado a Nuevo</field>
+        <field name="color">11</field>
+        <field name="tag_category">condition</field>
+        <field name="is_filterable">True</field>
+        <field name="show_on_card">True</field>
+    </record>
+
+    <record id="tag_exclusiva" model="real.estate.property.tag">
+        <field name="name">Exclusiva</field>
+        <field name="color">1</field>
+        <field name="tag_category">financial</field>
+        <field name="is_filterable">True</field>
+        <field name="show_on_card">True</field>
+    </record>
+
+    <record id="tag_pileta" model="real.estate.property.tag">
+        <field name="name">Pileta</field>
+        <field name="color">4</field>
+        <field name="tag_category">feature</field>
+        <field name="is_filterable">True</field>
+        <field name="show_on_card">True</field>
+    </record>
+
+    <record id="tag_balcon" model="real.estate.property.tag">
+        <field name="name">Balcón/Terraza</field>
+        <field name="color">5</field>
+        <field name="tag_category">feature</field>
+        <field name="is_filterable">True</field>
+        <field name="show_on_card">True</field>
+    </record>
+
+    <record id="tag_cochera" model="real.estate.property.tag">
+        <field name="name">Cochera</field>
+        <field name="color">2</field>
+        <field name="tag_category">feature</field>
+        <field name="is_filterable">True</field>
+        <field name="show_on_card">True</field>
+    </record>
+</odoo>

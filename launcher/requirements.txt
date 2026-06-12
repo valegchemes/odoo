@@ -1,0 +1,17 @@
+# OdooInmobiliaria Launcher - Dependencias
+# Para compilar: pip install -r requirements.txt
+
+# GUI
+# tkinter viene incluido en Python estándar
+
+# Base de datos
+psycopg2-binary>=2.9.9
+
+# Monitoreo de archivos (hot reload)
+watchdog>=3.0.0
+
+# Utilidades
+pyinstaller>=6.0.0  # Solo para compilar
+
+# Odoo dependencies (se instalan por separado via pip install -e ../odoo)
+# Ver ../odoo/requirements.txt

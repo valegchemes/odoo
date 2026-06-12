@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ============================================================ -->
+    <!-- WIZARD GENERAR CONTRATO                                        -->
+    <!-- ============================================================ -->
+    <record id="view_inmobiliaria_contract_wizard" model="ir.ui.view">
+        <field name="name">inmobiliaria.contract.wizard.form</field>
+        <field name="model">inmobiliaria.contract.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Generar Contrato">
+                <group string="Propiedad">
+                    <field name="property_id" readonly="1" options="{'no_create': True, 'no_open': True}"/>
+                    <field name="contract_type"/>
+                </group>
+                <group string="Partes">
+                    <field name="partner_id" domain="[('is_company', '=', False)]" options="{'no_create': False}"/>
+                </group>
+                <group string="Económico">
+                    <field name="currency_id" readonly="1"/>
+                    <field name="amount"/>
+                    <field name="payment_method"/>
+                </group>
+                <group string="Fechas">
+                    <field name="signing_date"/>
+                    <field name="expiration_date" invisible="contract_type != 'booking'"/>
+                </group>
+                <group string="Condiciones">
+                    <field name="subject_to_credit"/>
+                    <field name="subject_to_sale"/>
+                </group>
+                <group string="Documento">
+                    <field name="template_id" domain="[('model_id.model', '=', 'real.estate.property')]"/>
+                </group>
+                <field name="conditions" widget="html" placeholder="Condiciones particulares..."/>
+
+                <footer>
+                    <button string="Generar y Enviar a Firmar" name="action_generate" type="object" class="btn-primary"/>
+                    <button string="Cancelar" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_inmobiliaria_contract_wizard" model="ir.actions.act_window">
+        <field name="name">Generar Contrato</field>
+        <field name="res_model">inmobiliaria.contract.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="real_estate.model_real_estate_property"/>
+        <field name="binding_type">action</field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- WIZARD CONTRAOFERTA                                            -->
+    <!-- ============================================================ -->
+    <record id="view_inmobiliaria_counter_offer_wizard" model="ir.ui.view">
+        <field name="name">inmobiliaria.counter.offer.wizard.form</field>
+        <field name="model">inmobiliaria.counter.offer.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Enviar Contraoferta">
+                <group string="Oferta Original">
+                    <field name="property_id" readonly="1"/>
+                    <field name="partner_id" readonly="1"/>
+                    <field name="original_price" readonly="1" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                </group>
+                <group string="Contraoferta" class="mt-3">
+                    <field name="counter_price" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                    <field name="valid_until"/>
+                    <field name="auto_accept_if_match"/>
+                </group>
+                <group string="Mensaje" class="mt-3">
+                    <field name="counter_message" widget="html" placeholder="Explique la contraoferta al comprador..."/>
+                </group>
+
+                <footer>
+                    <button string="Enviar Contraoferta" name="action_send_counter_offer" type="object" class="btn-primary"/>
+                    <button string="Cancelar" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_inmobiliaria_counter_offer_wizard" model="ir.actions.act_window">
+        <field name="name">Contraoferta</field>
+        <field name="res_model">inmobiliaria.counter.offer.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="real_estate.model_real_estate_property_offer"/>
+        <field name="binding_type">action</field>
+    </record>
+</odoo>

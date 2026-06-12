@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ============================================================ -->
+    <!-- PLANTILLAS DE EMAIL                                            -->
+    <!-- ============================================================ -->
+
+    <!-- Oferta al Propietario -->
+    <record id="email_template_offer_to_owner" model="mail.template">
+        <field name="name">Inmobiliaria: Oferta al Propietario</field>
+        <field name="model_id" ref="real_estate.model_real_estate_property_offer"/>
+        <field name="subject">Nueva oferta para {{ object.property_id.name }} - ${{ object.price }}</field>
+        <field name="email_from">{{ object.property_id.owner_id.email or company.email }}</field>
+        <field name="email_to">{{ object.property_id.owner_id.email }}</field>
+        <field name="body_html" type="html">
+            <![CDATA[
+            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+                <h2 style="color: #2c3e50;">Nueva Oferta Recibida</h2>
+                <p>Estimado/a {{ object.property_id.owner_id.name or 'Propietario' }},</p>
+                <p>Se ha recibido una nueva oferta para su propiedad <strong>{{ object.property_id.name }}</strong>.</p>
+
+                <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                    <tr style="background: #f8f9fa;">
+                        <td style="padding: 10px; border: 1px solid #dee2e6;"><strong>Propiedad</strong></td>
+                        <td style="padding: 10px; border: 1px solid #dee2e6;">{{ object.property_id.name }}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #dee2e6;"><strong>Oferente</strong></td>
+                        <td style="padding: 10px; border: 1px solid #dee2e6;">{{ object.partner_id.name }}</td>
+                    </tr>
+                    <tr style="background: #f8f9fa;">
+                        <td style="padding: 10px; border: 1px solid #dee2e6;"><strong>Email Oferente</strong></td>
+                        <td style="padding: 10px; border: 1px solid #dee2e6;">{{ object.partner_id.email }}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #dee2e6;"><strong>Teléfono</strong></td>
+                        <td style="padding: 10px; border: 1px solid #dee2e6;">{{ object.partner_id.phone or 'No informado' }}</td>
+                    </tr>
+                    <tr style="background: #f8f9fa;">
+                        <td style="padding: 10px; border: 1px solid #dee2e6;"><strong>Precio Ofrecido</strong></td>
+                        <td style="padding: 10px; border: 1px solid #dee2e6; color: #27ae60; font-size: 1.2em;"><strong>${{ object.price | format_amount(object.currency_id) }}</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #dee2e6;"><strong>Tipo Operación</strong></td>
+                        <td style="padding: 10px; border: 1px solid #dee2e6;">{{ object.offer_type }}</td>
+                    </tr>
+                    <tr style="background: #f8f9fa;">
+                        <td style="padding: 10px; border: 1px solid #dee2e6;"><strong>Financiamiento</strong></td>
+                        <td style="padding: 10px; border: 1px solid #dee2e6;">{{ object.financing_type }}</td>
+                    </tr>
+                </table>
+
+                <p>Por favor, revise la oferta y responda a la brevedad.</p>
+
+                <div style="text-align: center; margin: 30px 0;">
+                    <a href="{{ object.get_base_url() }}/web#id={{ object.id }}&model=real.estate.property.offer&view_type=form"
+                       style="background: #3498db; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px;">
+                        Ver Oferta en Odoo
+                    </a>
+                </div>
+
+                <hr style="border: none; border-top: 1px solid #dee2e6; margin: 30px 0;"/>
+                <p style="color: #6c757d; font-size: 0.9em;">
+                    Este email fue generado automáticamente por el sistema de gestión inmobiliaria.<br/>
+                    {{ company.name }} - {{ company.email }}
+                </p>
+            </div>
+            ]]>
+        </field>
+    </record>
+
+    <!-- Contraoferta al Comprador -->
+    <record id="email_template_counter_offer" model="mail.template">
+        <field name="name">Inmobiliaria: Contraoferta al Comprador</field>
+        <field name="model_id" ref="real_estate.model_real_estate_property_offer"/>
+        <field name="subject">Contraoferta para {{ object.property_id.name }} - Nuevo precio: ${{ object.price }}</field>
+        <field name="email_from">{{ company.email }}</field>
+        <field name="email_to">{{ object.partner_id.email }}</field>
+        <field name="body_html" type="html">
+            <![CDATA[
+            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+                <h2 style="color: #e67e22;">Contraoferta Recibida</h2>
+                <p>Estimado/a {{ object.partner_id.name }},</p>
+                <p>El propietario de <strong>{{ object.property_id.name }}</strong> ha realizado una contraoferta sobre su oferta original.</p>
+
+                <div style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px; padding: 20px; margin: 20px 0;">
+                    <h3 style="margin-top: 0; color: #856404;">Nuevo Precio Propuesto</h3>
+                    <p style="font-size: 2em; font-weight: bold; color: #e67e22; margin: 10px 0;">
+                        ${{ object.price | format_amount(object.currency_id) }}
+                    </p>
+                    <p style="color: #856404;">Válida hasta: <strong>{{ object.validity_date }}</strong></p>
+                </div>
+
+                <p>Puede aceptar esta contraoferta, hacer una nueva propuesta, o rechazarla.</p>
+
+                <div style="text-align: center; margin: 30px 0;">
+                    <a href="{{ object.get_base_url() }}/web#id={{ object.id }}&model=real.estate.property.offer&view_type=form"
+                       style="background: #e67e22; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px;">
+                        Ver Contraoferta
+                    </a>
+                </div>
+
+                <hr style="border: none; border-top: 1px solid #dee2e6; margin: 30px 0;"/>
+                <p style="color: #6c757d; font-size: 0.9em;">
+                    {{ company.name }} - {{ company.email }}
+                </p>
+            </div>
+            ]]>
+        </field>
+    </record>
+
+    <!-- Notificación de Reserva/Seña -->
+    <record id="email_template_booking_confirmed" model="mail.template">
+        <field name="name">Inmobiliaria: Reserva Confirmada</field>
+        <field name="model_id" ref="real_estate.model_real_estate_property_offer"/>
+        <field name="subject">✅ Reserva Confirmada - {{ object.property_id.name }}</field>
+        <field name="email_from">{{ company.email }}</field>
+        <field name="email_to">{{ object.partner_id.email }}</field>
+        <field name="body_html" type="html">
+            <![CDATA[
+            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+                <h2 style="color: #27ae60;">¡Reserva Confirmada!</h2>
+                <p>Estimado/a {{ object.partner_id.name }},</p>
+                <p>Su reserva para la propiedad <strong>{{ object.property_id.name }}</strong> ha sido <span style="color: #27ae60; font-weight: bold;">CONFIRMADA</span>.</p>
+
+                <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                    <tr style="background: #f8f9fa;">
+                        <td style="padding: 10px; border: 1px solid #dee2e6;"><strong>Propiedad</strong></td>
+                        <td style="padding: 10px; border: 1px solid #dee2e6;">{{ object.property_id.name }}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #dee2e6;"><strong>Precio Acordado</strong></td>
+                        <td style="padding: 10px; border: 1px solid #dee2e6;">${{ object.price | format_amount(object.currency_id) }}</td>
+                    </tr>
+                    <tr style="background: #f8f9fa;">
+                        <td style="padding: 10px; border: 1px solid #dee2e6;"><strong>Seña/Reserva</strong></td>
+                        <td style="padding: 10px; border: 1px solid #dee2e6;">${{ object.down_payment | format_amount(object.currency_id) }}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #dee2e6;"><strong>Saldo Pendiente</strong></td>
+                        <td style="padding: 10px; border: 1px solid #dee2e6;">${{ (object.price - object.down_payment) | format_amount(object.currency_id) }}</td>
+                    </tr>
+                    <tr style="background: #f8f9fa;">
+                        <td style="padding: 10px; border: 1px solid #dee2e6;"><strong>Fecha Firma Boleto</strong></td>
+                        <td style="padding: 10px; border: 1px solid #dee2e6;">{{ object.signed_date }}</td>
+                    </tr>
+                </table>
+
+                <p>Próximos pasos:</p>
+                <ol>
+                    <li>Coordinar firma de boleto de compraventa</li>
+                    <li>Entregar documentación requerida</li>
+                    <li>Gestionar crédito hipotecario (si aplica)</li>
+                    <li>Coordinar escritura</li>
+                </ol>
+
+                <div style="text-align: center; margin: 30px 0;">
+                    <a href="{{ object.get_base_url() }}/web#id={{ object.id }}&model=real.estate.property.offer&view_type=form"
+                       style="background: #27ae60; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px;">
+                        Ver Detalles
+                    </a>
+                </div>
+
+                <hr style="border: none; border-top: 1px solid #dee2e6; margin: 30px 0;"/>
+                <p style="color: #6c757d; font-size: 0.9em;">
+                    {{ company.name }} - {{ company.email }}<br/>
+                    {{ company.phone }}
+                </p>
+            </div>
+            ]]>
+        </field>
+    </record>
+
+    <!-- Alerta de Vencimiento de Exclusiva -->
+    <record id="email_template_exclusive_expiring" model="mail.template">
+        <field name="name">Inmobiliaria: Exclusiva Próxima a Vencer</field>
+        <field name="model_id" ref="real_estate.model_real_estate_property"/>
+        <field name="subject">⚠️ Exclusiva vence en 7 días - {{ object.name }}</field>
+        <field name="email_from">{{ company.email }}</field>
+        <field name="email_to">{{ object.user_id.email or company.email }}</field>
+        <field name="body_html" type="html">
+            <![CDATA[
+            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+                <h2 style="color: #e74c3c;">⚠️ Alerta: Exclusiva Próxima a Vencer</h2>
+                <p>La exclusiva para la propiedad <strong>{{ object.name }}</strong> vence el <strong>{{ object.exclusive_until }}</strong> (en 7 días).</p>
+
+                <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                    <tr style="background: #f8f9fa;">
+                        <td style="padding: 10px; border: 1px solid #dee2e6;"><strong>Propiedad</strong></td>
+                        <td style="padding: 10px; border: 1px solid #dee2e6;">{{ object.name }}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #dee2e6;"><strong>Precio</strong></td>
+                        <td style="padding: 10px; border: 1px solid #dee2e6;">${{ object.price | format_amount(object.currency_id) }}</td>
+                    </tr>
+                    <tr style="background: #f8f9fa;">
+                        <td style="padding: 10px; border: 1px solid #dee2e6;"><strong>Agente Responsable</strong></td>
+                        <td style="padding: 10px; border: 1px solid #dee2e6;">{{ object.user_id.name }}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #dee2e6;"><strong>Fecha Vencimiento</strong></td>
+                        <td style="padding: 10px; border: 1px solid #dee2e6; color: #e74c3c;"><strong>{{ object.exclusive_until }}</strong></td>
+                    </tr>
+                    <tr style="background: #f8f9fa;">
+                        <td style="padding: 10px; border: 1px solid #dee2e6;"><strong>Días Restantes</strong></td>
+                        <td style="padding: 10px; border: 1px solid #dee2e6;">7 días</td>
+                    </tr>
+                </table>
+
+                <p>Acciones recomendadas:</p>
+                <ul>
+                    <li>Contactar al propietario para renovar exclusiva</li>
+                    <li>Evaluar ofertas recibidas</li>
+                    <li>Actualizar estrategia comercial</li>
+                </ul>
+
+                <div style="text-align: center; margin: 30px 0;">
+                    <a href="{{ object.get_base_url() }}/web#id={{ object.id }}&model=real.estate.property&view_type=form"
+                       style="background: #e74c3c; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px;">
+                        Ver Propiedad
+                    </a>
+                </div>
+            </div>
+            ]]>
+        </field>
+    </record>
+</odoo>

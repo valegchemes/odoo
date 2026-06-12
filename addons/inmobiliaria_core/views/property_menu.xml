@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ============================================================ -->
+    <!-- MENÚ PRINCIPAL INMOBILIARIA                                    -->
+    <!-- ============================================================ -->
+    <record id="menu_inmobiliaria_root" model="ir.ui.menu">
+        <field name="name">Inmobiliaria</field>
+        <field name="sequence">10</field>
+        <field name="web_icon">fa fa-building-o</field>
+        <field name="active" eval="True"/>
+    </record>
+
+    <!-- Propiedades -->
+    <record id="menu_inmobiliaria_properties" model="ir.ui.menu">
+        <field name="name">Propiedades</field>
+        <field name="parent_id" ref="menu_inmobiliaria_root"/>
+        <field name="sequence">10</field>
+        <field name="action" ref="real_estate.action_real_estate_property"/>
+    </record>
+
+    <record id="menu_inmobiliaria_property_types" model="ir.ui.menu">
+        <field name="name">Tipos de Propiedad</field>
+        <field name="parent_id" ref="menu_inmobiliaria_root"/>
+        <field name="sequence">20</field>
+        <field name="action" ref="real_estate.action_real_estate_property_type"/>
+    </record>
+
+    <record id="menu_inmobiliaria_tags" model="ir.ui.menu">
+        <field name="name">Etiquetas</field>
+        <field name="parent_id" ref="menu_inmobiliaria_root"/>
+        <field name="sequence">30</field>
+        <field name="action" ref="real_estate.action_real_estate_property_tag"/>
+    </record>
+
+    <!-- Amenities -->
+    <record id="menu_inmobiliaria_amenities" model="ir.ui.menu">
+        <field name="name">Amenities</field>
+        <field name="parent_id" ref="menu_inmobiliaria_root"/>
+        <field name="sequence">40</field>
+        <field name="action" ref="action_inmobiliaria_amenity"/>
+    </record>
+
+    <!-- Barrios -->
+    <record id="menu_inmobiliaria_neighborhoods" model="ir.ui.menu">
+        <field name="name">Barrios</field>
+        <field name="parent_id" ref="menu_inmobiliaria_root"/>
+        <field name="sequence">50</field>
+        <field name="action" ref="action_inmobiliaria_neighborhood"/>
+    </record>
+
+    <!-- Comercial -->
+    <record id="menu_inmobiliaria_commercial" model="ir.ui.menu">
+        <field name="name">Comercial</field>
+        <field name="parent_id" ref="menu_inmobiliaria_root"/>
+        <field name="sequence">60</field>
+    </record>
+
+    <record id="menu_inmobiliaria_offers" model="ir.ui.menu">
+        <field name="name">Ofertas</field>
+        <field name="parent_id" ref="menu_inmobiliaria_commercial"/>
+        <field name="sequence">10</field>
+        <field name="action" ref="real_estate.action_real_estate_property_offer"/>
+    </record>
+
+    <record id="menu_inmobiliaria_contracts" model="ir.ui.menu">
+        <field name="name">Contratos / Boletos</field>
+        <field name="parent_id" ref="menu_inmobiliaria_commercial"/>
+        <field name="sequence">20</field>
+        <field name="action" ref="action_inmobiliaria_contract"/>
+    </record>
+
+    <!-- Reporting -->
+    <record id="menu_inmobiliaria_reporting" model="ir.ui.menu">
+        <field name="name">Reportes</field>
+        <field name="parent_id" ref="menu_inmobiliaria_root"/>
+        <field name="sequence">80</field>
+    </record>
+
+    <record id="menu_inmobiliaria_property_analysis" model="ir.ui.menu">
+        <field name="name">Análisis Propiedades</field>
+        <field name="parent_id" ref="menu_inmobiliaria_reporting"/>
+        <field name="sequence">10</field>
+        <field name="action" ref="action_inmobiliaria_property_analysis"/>
+    </record>
+
+    <record id="menu_inmobiliaria_sales_funnel" model="ir.ui.menu">
+        <field name="name">Embudo Ventas</field>
+        <field name="parent_id" ref="menu_inmobiliaria_reporting"/>
+        <field name="sequence">20</field>
+        <field name="action" ref="action_inmobiliaria_sales_funnel"/>
+    </record>
+
+    <!-- Configuración -->
+    <record id="menu_inmobiliaria_config" model="ir.ui.menu">
+        <field name="name">Configuración</field>
+        <field name="parent_id" ref="menu_inmobiliaria_root"/>
+        <field name="sequence">100</field>
+        <field name="groups_id" eval="[(4, ref('base.group_system'))]"/>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- ACTIONS PARA NUEVOS MODELOS                                    -->
+    <!-- ============================================================ -->
+    <record id="action_inmobiliaria_amenity" model="ir.actions.act_window">
+        <field name="name">Amenities</field>
+        <field name="res_model">inmobiliaria.amenity</field>
+        <field name="view_mode">tree,form,search</field>
+        <field name="search_view_id" ref="view_inmobiliaria_amenity_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crear amenities para propiedades
+            </p>
+        </field>
+    </record>
+
+    <record id="action_inmobiliaria_neighborhood" model="ir.actions.act_window">
+        <field name="name">Barrios</field>
+        <field name="res_model">inmobiliaria.neighborhood</field>
+        <field name="view_mode">tree,form,search,kanban,map</field>
+        <field name="search_view_id" ref="view_inmobiliaria_neighborhood_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Definir barrios para búsquedas geográficas
+            </p>
+        </field>
+    </record>
+
+    <!-- Acciones placeholder para reportes (se implementan después) -->
+    <record id="action_inmobiliaria_property_analysis" model="ir.actions.act_window">
+        <field name="name">Análisis Propiedades</field>
+        <field name="res_model">real.estate.property</field>
+        <field name="view_mode">pivot,graph,tree</field>
+        <field name="domain">[('active', '=', True)]</field>
+        <field name="context">{'search_default_group_by_property_type': 1, 'search_default_group_by_state': 1}</field>
+    </record>
+
+    <record id="action_inmobiliaria_sales_funnel" model="ir.actions.act_window">
+        <field name="name">Embudo de Ventas</field>
+        <field name="res_model">real.estate.property.offer</field>
+        <field name="view_mode">graph,pivot,tree</field>
+        <field name="context">{'search_default_group_by_status': 1, 'search_default_group_by_property_type': 1}</field>
+    </record>
+
+    <record id="action_inmobiliaria_contract" model="ir.actions.act_window">
+        <field name="name">Contratos</field>
+        <field name="res_model">sign.template</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('model_id.model', '=', 'real.estate.property')]</field>
+    </record>
+</odoo>

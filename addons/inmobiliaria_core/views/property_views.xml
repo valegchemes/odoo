@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ============================================================ -->
+    <!-- PROPIEDAD - VISTA FORM EXTENDIDA                             -->
+    <!-- ============================================================ -->
+    <record id="view_real_estate_property_form_inherit" model="ir.ui.view">
+        <field name="name">real.estate.property.form.inherit.inmobiliaria</field>
+        <field name="model">real.estate.property</field>
+        <field name="inherit_id" ref="real_estate.view_real_estate_property_form"/>
+        <field name="arch" type="xml">
+            <!-- Añadir pestaña "Detalles Técnicos" después de "General" -->
+            <xpath expr="//notebook" position="inside">
+                <page string="Detalles Técnicos" name="technical_details" groups="base.group_user">
+                    <group string="Superficies">
+                        <field name="surface_covered" widget="float" options="{'decimals': 2}"/>
+                        <field name="surface_uncovered" widget="float" options="{'decimals': 2}"/>
+                        <field name="surface_total" readonly="1" widget="float" options="{'decimals': 2}"/>
+                    </group>
+                    <group string="Infraestructura">
+                        <field name="has_gas"/>
+                        <field name="has_water"/>
+                        <field name="has_electricity"/>
+                        <field name="has_sewage"/>
+                        <field name="has_internet"/>
+                    </group>
+                    <group string="Cochera">
+                        <field name="garage_type"/>
+                        <field name="garage_included"/>
+                        <field name="garage_price" invisible="garage_type == 'none' or not garage_included"/>
+                    </group>
+                    <group string="Edificio">
+                        <field name="construction_year"/>
+                        <field name="condition"/>
+                        <field name="floor"/>
+                        <field name="apartment"/>
+                    </group>
+                </page>
+
+                <page string="Legal y Documentación" name="legal_docs" groups="base.group_user">
+                    <group string="Escritura">
+                        <field name="has_deed"/>
+                        <field name="deed_status"/>
+                        <field name="allows_credit"/>
+                        <field name="allows_swap"/>
+                    </group>
+                    <group string="Ubicación Catastral">
+                        <field name="neighborhood_id"/>
+                        <field name="block"/>
+                        <field name="lot"/>
+                    </group>
+                    <group string="Documentos">
+                        <field name="document_ids" widget="many2many_tags" options="{'create': True}"/>
+                    </group>
+                </page>
+
+                <page string="Comercial" name="commercial" groups="base.group_user">
+                    <group string="Comisión">
+                        <field name="commission_rate"/>
+                        <field name="commission_fixed"/>
+                    </group>
+                    <group string="Exclusiva">
+                        <field name="exclusive"/>
+                        <field name="exclusive_until" invisible="not exclusive"/>
+                    </group>
+                    <group string="Publicación Web">
+                        <field name="published_on_web"/>
+                        <field name="featured_on_web" invisible="not published_on_web"/>
+                    </group>
+                    <group string="Propietario">
+                        <field name="owner_id"/>
+                        <field name="owner_phone" readonly="1"/>
+                        <field name="owner_email" readonly="1"/>
+                    </group>
+                </page>
+
+                <page string="Amenities" name="amenities" groups="base.group_user">
+                    <field name="amenity_ids" widget="many2many_tags" options="{'create': True}"/>
+                </page>
+            </xpath>
+
+            <!-- Botones en header -->
+            <xpath expr="//header" position="inside">
+                <button name="action_publish_web" string="Publicar en Web" type="object" class="btn-primary" invisible="published_on_web"/>
+                <button name="action_unpublish_web" string="Quitar de Web" type="object" class="btn-secondary" invisible="not published_on_web"/>
+                <button name="action_generate_contract" string="Generar Contrato" type="object" class="btn-info" groups="base.group_user"/>
+            </xpath>
+
+            <!-- Mostrar amenities en kanban -->
+            <xpath expr="//field[@name='tag_ids']" position="after">
+                <field name="amenity_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- PROPIEDAD - VISTA TREE EXTENDIDA                             -->
+    <!-- ============================================================ -->
+    <record id="view_real_estate_property_tree_inherit" model="ir.ui.view">
+        <field name="name">real.estate.property.tree.inherit.inmobiliaria</field>
+        <field name="model">real.estate.property</field>
+        <field name="inherit_id" ref="real_estate.view_real_estate_property_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='property_type_id']" position="after">
+                <field name="neighborhood_id" optional="hide"/>
+                <field name="surface_total" optional="hide" widget="float" options="{'decimals': 1}"/>
+                <field name="condition" optional="hide"/>
+                <field name="exclusive" optional="hide"/>
+                <field name="published_on_web" optional="hide"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- PROPIEDAD - VISTA SEARCH EXTENDIDA                           -->
+    <!-- ============================================================ -->
+    <record id="view_real_estate_property_search_inherit" model="ir.ui.view">
+        <field name="name">real.estate.property.search.inherit.inmobiliaria</field>
+        <field name="model">real.estate.property</field>
+        <field name="inherit_id" ref="real_estate.view_real_estate_property_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='for_sale']" position="after">
+                <filter string="En Alquiler" name="for_rent" domain="[('offer_type', '=', 'rent')]"/>
+                <filter string="Publicadas en Web" name="published_web" domain="[('published_on_web', '=', True)]"/>
+                <filter string="Exclusivas" name="exclusive" domain="[('exclusive', '=', True)]"/>
+                <filter string="Con Cochera" name="with_garage" domain="[('garage_type', '!=', 'none')]"/>
+                <filter string="Acepta Crédito" name="accepts_credit" domain="[('allows_credit', '=', True)]"/>
+            </xpath>
+
+            <xpath expr="//group[@name='group_by']" position="inside">
+                <filter string="Barrio" name="group_by_neighborhood" context="{'group_by': 'neighborhood_id'}"/>
+                <filter string="Estado" name="group_by_condition" context="{'group_by': 'condition'}"/>
+                <filter string="Tipo Operación" name="group_by_offer_type" context="{'group_by': 'offer_type'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- PROPIEDAD - VISTA KANBAN EXTENDIDA                           -->
+    <!-- ============================================================ -->
+    <record id="view_real_estate_property_kanban_inherit" model="ir.ui.view">
+        <field name="name">real.estate.property.kanban.inherit.inmobiliaria</field>
+        <field name="model">real.estate.property</field>
+        <field name="inherit_id" ref="real_estate.view_real_estate_property_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@class='oe_kanban_global_click']" position="inside">
+                <div class="mt-2" t-if="record.published_on_web.raw_value">
+                    <span class="badge bg-success">Publicado</span>
+                </div>
+                <div class="mt-2" t-if="record.exclusive.raw_value">
+                    <span class="badge bg-warning text-dark">Exclusiva</span>
+                </div>
+                <div class="mt-2" t-if="record.garage_type.raw_value != 'none'">
+                    <span class="badge bg-info"><i class="fa fa-car"/> Cochera</span>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- AMENITY - VISTAS                                             -->
+    <!-- ============================================================ -->
+    <record id="view_inmobiliaria_amenity_tree" model="ir.ui.view">
+        <field name="name">inmobiliaria.amenity.tree</field>
+        <field name="model">inmobiliaria.amenity</field>
+        <field name="arch" type="xml">
+            <tree string="Amenities">
+                <field name="icon" widget="font_awesome"/>
+                <field name="name"/>
+                <field name="category" widget="badge"/>
+                <field name="is_premium" widget="boolean_toggle"/>
+                <field name="active" widget="boolean_toggle"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_inmobiliaria_amenity_form" model="ir.ui.view">
+        <field name="name">inmobiliaria.amenity.form</field>
+        <field name="model">inmobiliaria.amenity</field>
+        <field name="arch" type="xml">
+            <form string="Amenity">
+                <header>
+                    <field name="active" widget="boolean_toggle" options="{'terminology': 'archive'}"/>
+                </header>
+                <sheet>
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <field name="icon" widget="font_awesome" class="fa-2x text-primary" placeholder="fa-swimming-pool"/>
+                        <field name="is_premium" widget="boolean_toggle" string="Premium"/>
+                    </div>
+                    <group>
+                        <field name="name"/>
+                        <field name="category"/>
+                        <field name="sequence"/>
+                    </group>
+                    <group>
+                        <field name="description" placeholder="Descripción para mostrar en web..."/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_inmobiliaria_amenity_search" model="ir.ui.view">
+        <field name="name">inmobiliaria.amenity.search</field>
+        <field name="model">inmobiliaria.amenity</field>
+        <field name="arch" type="xml">
+            <search string="Buscar Amenities">
+                <field name="name" string="Nombre" filter_domain="[('name', 'ilike', self)]"/>
+                <field name="category" string="Categoría"/>
+                <filter string="Activos" name="active" domain="[('active', '=', True)]"/>
+                <filter string="Premium" name="premium" domain="[('is_premium', '=', True)]"/>
+                <group string="Agrupar por">
+                    <filter string="Categoría" name="group_by_category" context="{'group_by': 'category'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- NEIGHBORHOOD - VISTAS                                        -->
+    <!-- ============================================================ -->
+    <record id="view_inmobiliaria_neighborhood_tree" model="ir.ui.view">
+        <field name="name">inmobiliaria.neighborhood.tree</field>
+        <field name="model">inmobiliaria.neighborhood</field>
+        <field name="arch" type="xml">
+            <tree string="Barrios" decoration-info="featured==True">
+                <field name="display_name"/>
+                <field name="city_id"/>
+                <field name="property_count" widget="field_integer"/>
+                <field name="avg_price_m2" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                <field name="featured" widget="boolean_toggle"/>
+                <field name="active" widget="boolean_toggle"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_inmobiliaria_neighborhood_form" model="ir.ui.view">
+        <field name="name">inmobiliaria.neighborhood.form</field>
+        <field name="model">inmobiliaria.neighborhood</field>
+        <field name="arch" type="xml">
+            <form string="Barrio">
+                <header>
+                    <field name="active" widget="boolean_toggle" options="{'terminology': 'archive'}"/>
+                    <field name="featured" widget="boolean_toggle" string="Destacado Web"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="city_id"/>
+                        <field name="zip_code"/>
+                    </group>
+                    <group>
+                        <field name="latitude" widget="latitude"/>
+                        <field name="longitude" widget="longitude"/>
+                    </group>
+                    <notebook>
+                        <page string="Descripción">
+                            <field name="description" placeholder="Descripción del barrio para web..."/>
+                        </page>
+                        <page string="Propiedades">
+                            <field name="property_count" readonly="1"/>
+                            <field name="avg_price_m2" readonly="1" widget="monetary"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_inmobiliaria_neighborhood_search" model="ir.ui.view">
+        <field name="name">inmobiliaria.neighborhood.search</field>
+        <field name="model">inmobiliaria.neighborhood</field>
+        <field name="arch" type="xml">
+            <search string="Buscar Barrios">
+                <field name="name" string="Nombre" filter_domain="[('name', 'ilike', self)]"/>
+                <field name="city_id" string="Ciudad"/>
+                <filter string="Destacados" name="featured" domain="[('featured', '=', True)]"/>
+                <group string="Agrupar por">
+                    <filter string="Ciudad" name="group_by_city" context="{'group_by': 'city_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- TAG - EXTENDER VISTA EXISTENTE                               -->
+    <!-- ============================================================ -->
+    <record id="view_real_estate_property_tag_form_inherit" model="ir.ui.view">
+        <field name="name">real.estate.property.tag.form.inherit.inmobiliaria</field>
+        <field name="model">real.estate.property.tag</field>
+        <field name="inherit_id" ref="real_estate.view_real_estate_property_tag_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="inside">
+                <field name="tag_category"/>
+                <field name="is_filterable"/>
+                <field name="show_on_card"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

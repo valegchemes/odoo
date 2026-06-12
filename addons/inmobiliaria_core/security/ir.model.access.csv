@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_inmobiliaria_amenity_user,inmobiliaria.amenity.user,model_inmobiliaria_amenity,base.group_user,1,1,1,1
+access_inmobiliaria_amenity_manager,inmobiliaria.amenity.manager,model_inmobiliaria_amenity,base.group_system,1,1,1,1
+access_inmobiliaria_neighborhood_user,inmobiliaria.neighborhood.user,model_inmobiliaria_neighborhood,base.group_user,1,1,1,1
+access_inmobiliaria_neighborhood_manager,inmobiliaria.neighborhood.manager,model_inmobiliaria_neighborhood,base.group_system,1,1,1,1
+access_real_estate_property_extended,real.estate.property.extended,model_real_estate_property,base.group_user,1,1,1,1
+access_real_estate_property_offer_extended,real.estate.property.offer.extended,model_real_estate_property_offer,base.group_user,1,1,1,1

@@ -1,0 +1,1404 @@
+2026-06-12 02:36:29,471 1 WARNING ? odoo.tools.config: option log_db reads 'False' in the config file at /etc/odoo/odoo.conf but isn't a boolean option, skip 
+2026-06-12 02:36:29,472 1 WARNING ? odoo.tools.config: unknown option 'translate_modules' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 02:36:29,473 1 WARNING ? odoo.tools.config: unknown option 'longpolling_port' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 02:36:29,474 1 WARNING ? odoo.tools.config: option log_db reads 'False' in the config file at /etc/odoo/odoo.conf but isn't a boolean option, skip 
+2026-06-12 02:36:29,474 1 WARNING ? odoo.tools.config: unknown option 'translate_modules' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 02:36:29,475 1 WARNING ? odoo.tools.config: unknown option 'longpolling_port' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 02:36:29,475 1 WARNING ? odoo.tools.config: missing --http-interface/http_interface, using 0.0.0.0 by default, will change to 127.0.0.1 in 20.0 
+2026-06-12 02:36:29,476 1 INFO ? odoo: Odoo version 19.0-20260609 
+2026-06-12 02:36:29,477 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-06-12 02:36:29,477 1 INFO ? odoo: addons paths: _NamespacePath(['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/19.0', '/mnt/extra-addons', '/usr/lib/python3/dist-packages/addons']) 
+2026-06-12 02:36:29,478 1 INFO ? odoo: database: odoo@db:5432 
+2026-06-12 02:36:29,987 1 INFO ? odoo.service.server: Watching addons folder /usr/lib/python3/dist-packages/odoo/addons 
+2026-06-12 02:36:29,987 1 INFO ? odoo.service.server: Watching addons folder /var/lib/odoo/addons/19.0 
+2026-06-12 02:36:29,988 1 INFO ? odoo.service.server: Watching addons folder /mnt/extra-addons 
+2026-06-12 02:36:29,989 1 INFO ? odoo.service.server: Watching addons folder /usr/lib/python3/dist-packages/addons 
+2026-06-12 02:37:22,009 1 INFO ? odoo.service.server: AutoReload watcher running with watchdog 
+2026-06-12 02:37:22,010 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on de2a1499a7e7:8069 
+2026-06-12 02:37:22,124 1 ERROR odoo odoo.modules.loading: Database odoo not initialized, you can force it with `-i base` 
+2026-06-12 02:37:22,125 1 INFO odoo odoo.registry: Registry loaded in 0.114s 
+2026-06-12 02:38:22,189 1 ERROR odoo odoo.sql_db: bad query: b"\n            SELECT latest_version\n            FROM ir_module_module\n             WHERE name='base'\n        "
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2026-06-12 02:38:22,190 1 WARNING odoo odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo. 
+2026-06-12 02:38:55,572 1 ERROR odoo odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 2829, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 2258, in _serve_db
+    rule, args = self.registry['ir.http']._match(self.httprequest.path)
+                 ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/orm/registry.py", line 335, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2026-06-12 02:38:55,577 1 INFO odoo werkzeug: 127.0.0.1 - - [12/Jun/2026 02:38:55] "GET / HTTP/1.1" 500 - 1 0.001 0.006
+2026-06-12 02:39:22,249 1 ERROR odoo odoo.sql_db: bad query: b"\n            SELECT latest_version\n            FROM ir_module_module\n             WHERE name='base'\n        "
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2026-06-12 02:39:22,250 1 WARNING odoo odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo. 
+2026-06-12 02:40:22,277 1 ERROR odoo odoo.sql_db: bad query: b"\n            SELECT latest_version\n            FROM ir_module_module\n             WHERE name='base'\n        "
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2026-06-12 02:40:22,283 1 WARNING odoo odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo. 
+2026-06-12 02:40:45,603 38 WARNING ? odoo.tools.config: option log_db reads 'False' in the config file at /etc/odoo/odoo.conf but isn't a boolean option, skip 
+2026-06-12 02:40:45,604 38 WARNING ? odoo.tools.config: unknown option 'translate_modules' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 02:40:45,604 38 WARNING ? odoo.tools.config: unknown option 'longpolling_port' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 02:40:45,605 38 WARNING ? odoo.tools.config: option log_db reads 'False' in the config file at /etc/odoo/odoo.conf but isn't a boolean option, skip 
+2026-06-12 02:40:45,605 38 WARNING ? odoo.tools.config: unknown option 'translate_modules' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 02:40:45,605 38 WARNING ? odoo.tools.config: unknown option 'longpolling_port' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 02:40:45,606 38 WARNING ? odoo.tools.config: missing --http-interface/http_interface, using 0.0.0.0 by default, will change to 127.0.0.1 in 20.0 
+2026-06-12 02:40:45,606 38 INFO ? odoo: Odoo version 19.0-20260609 
+2026-06-12 02:40:45,608 38 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-06-12 02:40:45,608 38 INFO ? odoo: addons paths: _NamespacePath(['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/19.0', '/mnt/extra-addons', '/usr/lib/python3/dist-packages/addons']) 
+2026-06-12 02:40:45,609 38 INFO ? odoo: database: odoo@db:5432 
+2026-06-12 02:40:45,806 38 INFO ? odoo.service.server: Watching addons folder /usr/lib/python3/dist-packages/odoo/addons 
+2026-06-12 02:40:45,807 38 INFO ? odoo.service.server: Watching addons folder /var/lib/odoo/addons/19.0 
+2026-06-12 02:40:45,807 38 INFO ? odoo.service.server: Watching addons folder /mnt/extra-addons 
+2026-06-12 02:40:45,808 38 INFO ? odoo.service.server: Watching addons folder /usr/lib/python3/dist-packages/addons 
+2026-06-12 02:41:22,341 1 ERROR odoo odoo.sql_db: bad query: b"\n            SELECT latest_version\n            FROM ir_module_module\n             WHERE name='base'\n        "
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2026-06-12 02:41:22,342 1 WARNING odoo odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo. 
+2026-06-12 02:41:30,613 38 INFO ? odoo.service.server: AutoReload watcher running with watchdog 
+2026-06-12 02:41:30,624 38 INFO odoo odoo.modules.loading: Initializing database odoo 
+2026-06-12 02:41:33,227 38 INFO odoo odoo.modules.loading: loading 1 modules... 
+2026-06-12 02:41:33,228 38 INFO odoo odoo.modules.loading: Loading module base (1/1) 
+2026-06-12 02:41:33,251 38 INFO odoo odoo.registry: module base: creating or updating database tables 
+2026-06-12 02:41:34,178 38 INFO odoo odoo.models: Prepare computation of ir.module.module.menus_by_module 
+2026-06-12 02:41:34,179 38 INFO odoo odoo.models: Prepare computation of ir.module.module.reports_by_module 
+2026-06-12 02:41:34,179 38 INFO odoo odoo.models: Prepare computation of ir.module.module.views_by_module 
+2026-06-12 02:41:34,527 38 INFO odoo odoo.models: Prepare computation of res.partner.user_id 
+2026-06-12 02:41:34,527 38 INFO odoo odoo.models: Prepare computation of res.partner.commercial_partner_id 
+2026-06-12 02:41:34,528 38 INFO odoo odoo.models: Prepare computation of res.partner.complete_name 
+2026-06-12 02:41:34,528 38 INFO odoo odoo.models: Prepare computation of res.partner.lang 
+2026-06-12 02:41:34,528 38 INFO odoo odoo.models: Prepare computation of res.partner.company_registry 
+2026-06-12 02:41:34,529 38 INFO odoo odoo.models: Prepare computation of res.partner.commercial_company_name 
+2026-06-12 02:41:34,529 38 INFO odoo odoo.models: Prepare computation of res.partner.properties 
+2026-06-12 02:41:34,530 38 INFO odoo odoo.models: Prepare computation of res.partner.partner_share 
+2026-06-12 02:41:34,632 38 INFO odoo odoo.models: Prepare computation of res.currency.decimal_places 
+2026-06-12 02:41:34,701 38 INFO odoo odoo.models: Prepare computation of res.company.uses_default_logo 
+2026-06-12 02:41:34,702 38 INFO odoo odoo.models: Prepare computation of res.company.logo_web 
+2026-06-12 02:41:34,710 38 INFO odoo odoo.models: Computing parent_path for table res_company... 
+2026-06-12 02:41:34,799 38 INFO odoo odoo.models: Prepare computation of res.users.signature 
+2026-06-12 02:41:34,800 38 INFO odoo odoo.models: Prepare computation of res.users.share 
+2026-06-12 02:41:36,718 38 INFO odoo odoo.modules.loading: loading base/data/res_bank.xml 
+2026-06-12 02:41:36,724 38 INFO odoo odoo.modules.loading: loading base/data/res.lang.csv 
+2026-06-12 02:41:36,754 38 INFO odoo odoo.modules.loading: loading base/data/res_lang_data.xml 
+2026-06-12 02:41:36,788 38 INFO odoo odoo.modules.loading: loading base/data/res_partner_data.xml 
+2026-06-12 02:41:36,829 38 INFO odoo odoo.modules.loading: loading base/data/res_currency_data.xml 
+2026-06-12 02:41:37,301 38 INFO odoo odoo.modules.loading: loading base/data/res_company_data.xml 
+2026-06-12 02:41:37,311 38 INFO odoo odoo.modules.loading: loading base/data/res_users_data.xml 
+2026-06-12 02:41:38,012 38 INFO odoo odoo.modules.loading: loading base/data/report_paperformat_data.xml 
+2026-06-12 02:41:38,021 38 INFO odoo odoo.modules.loading: loading base/data/res_country_data.xml 
+2026-06-12 02:41:38,444 38 INFO odoo odoo.modules.loading: loading base/data/ir_demo_data.xml 
+2026-06-12 02:41:38,455 38 INFO odoo odoo.modules.loading: loading base/security/base_groups.xml 
+2026-06-12 02:41:38,605 38 INFO odoo odoo.modules.loading: loading base/security/base_security.xml 
+2026-06-12 02:41:38,745 38 INFO odoo odoo.modules.loading: loading base/wizard/wizard_ir_model_menu_create_views.xml 
+2026-06-12 02:41:38,757 38 INFO odoo odoo.modules.loading: loading base/views/base_menus.xml 
+2026-06-12 02:41:38,811 38 INFO odoo odoo.modules.loading: loading base/views/decimal_precision_views.xml 
+2026-06-12 02:41:38,831 38 INFO odoo odoo.modules.loading: loading base/views/res_config_views.xml 
+2026-06-12 02:41:38,840 38 INFO odoo odoo.modules.loading: loading base/data/res.country.state.csv 
+2026-06-12 02:41:39,089 38 INFO odoo odoo.modules.loading: loading base/views/ir_actions_views.xml 
+2026-06-12 02:41:39,224 38 INFO odoo odoo.modules.loading: loading base/views/ir_asset_views.xml 
+2026-06-12 02:41:39,242 38 INFO odoo odoo.modules.loading: loading base/views/ir_config_parameter_views.xml 
+2026-06-12 02:41:39,259 38 INFO odoo odoo.modules.loading: loading base/views/ir_cron_views.xml 
+2026-06-12 02:41:39,290 38 INFO odoo odoo.modules.loading: loading base/views/ir_cron_trigger_views.xml 
+2026-06-12 02:41:39,308 38 INFO odoo odoo.modules.loading: loading base/views/ir_filters_views.xml 
+2026-06-12 02:41:39,334 38 INFO odoo odoo.modules.loading: loading base/views/ir_mail_server_views.xml 
+2026-06-12 02:41:39,355 38 INFO odoo odoo.modules.loading: loading base/views/ir_model_views.xml 
+2026-06-12 02:41:39,486 38 INFO odoo odoo.modules.loading: loading base/views/ir_attachment_views.xml 
+2026-06-12 02:41:39,508 38 INFO odoo odoo.modules.loading: loading base/views/ir_rule_views.xml 
+2026-06-12 02:41:39,530 38 INFO odoo odoo.modules.loading: loading base/views/ir_sequence_views.xml 
+2026-06-12 02:41:39,558 38 INFO odoo odoo.modules.loading: loading base/views/ir_ui_menu_views.xml 
+2026-06-12 02:41:39,579 38 INFO odoo odoo.modules.loading: loading base/views/ir_ui_view_views.xml 
+2026-06-12 02:41:39,627 38 INFO odoo odoo.modules.loading: loading base/views/ir_default_views.xml 
+2026-06-12 02:41:39,647 38 INFO odoo odoo.modules.loading: loading base/data/ir_config_parameter_data.xml 
+2026-06-12 02:41:39,652 38 INFO odoo odoo.modules.loading: loading base/data/ir_cron_data.xml 
+2026-06-12 02:41:39,663 38 INFO odoo odoo.modules.loading: loading base/report/ir_model_report.xml 
+2026-06-12 02:41:39,669 38 INFO odoo odoo.modules.loading: loading base/report/ir_model_templates.xml 
+2026-06-12 02:41:39,682 38 INFO odoo odoo.modules.loading: loading base/views/ir_logging_views.xml 
+2026-06-12 02:41:39,702 38 INFO odoo odoo.modules.loading: loading base/views/ir_qweb_widget_templates.xml 
+2026-06-12 02:41:39,720 38 INFO odoo odoo.modules.loading: loading base/views/ir_module_views.xml 
+2026-06-12 02:41:39,771 38 INFO odoo odoo.modules.loading: loading base/data/ir_module_category_data.xml 
+2026-06-12 02:41:39,805 38 INFO odoo odoo.modules.loading: loading base/data/ir_module_module.xml 
+2026-06-12 02:41:39,854 38 INFO odoo odoo.modules.loading: loading base/report/ir_module_reports.xml 
+2026-06-12 02:41:39,858 38 INFO odoo odoo.modules.loading: loading base/report/ir_module_report_templates.xml 
+2026-06-12 02:41:39,869 38 INFO odoo odoo.modules.loading: loading base/wizard/base_module_update_views.xml 
+2026-06-12 02:41:39,885 38 INFO odoo odoo.modules.loading: loading base/wizard/base_language_install_views.xml 
+2026-06-12 02:41:39,897 38 INFO odoo odoo.modules.loading: loading base/wizard/base_import_language_views.xml 
+2026-06-12 02:41:39,911 38 INFO odoo odoo.modules.loading: loading base/wizard/base_module_upgrade_views.xml 
+2026-06-12 02:41:39,927 38 INFO odoo odoo.modules.loading: loading base/wizard/base_module_uninstall_views.xml 
+2026-06-12 02:41:39,938 38 INFO odoo odoo.modules.loading: loading base/wizard/base_export_language_views.xml 
+2026-06-12 02:41:39,950 38 INFO odoo odoo.modules.loading: loading base/wizard/base_partner_merge_views.xml 
+2026-06-12 02:41:39,965 38 INFO odoo odoo.modules.loading: loading base/data/ir_demo_failure_data.xml 
+2026-06-12 02:41:39,982 38 INFO odoo odoo.modules.loading: loading base/views/ir_profile_views.xml 
+2026-06-12 02:41:40,005 38 INFO odoo odoo.modules.loading: loading base/views/res_company_views.xml 
+2026-06-12 02:41:40,025 38 INFO odoo odoo.modules.loading: loading base/views/res_lang_views.xml 
+2026-06-12 02:41:40,045 38 INFO odoo odoo.modules.loading: loading base/views/res_partner_views.xml 
+2026-06-12 02:41:40,125 38 INFO odoo odoo.modules.loading: loading base/views/res_bank_views.xml 
+2026-06-12 02:41:40,158 38 INFO odoo odoo.modules.loading: loading base/views/res_country_views.xml 
+2026-06-12 02:41:40,202 38 INFO odoo odoo.modules.loading: loading base/views/res_currency_views.xml 
+2026-06-12 02:41:40,238 38 INFO odoo odoo.modules.loading: loading base/views/res_groups_views.xml 
+2026-06-12 02:41:40,279 38 INFO odoo odoo.modules.loading: loading base/views/res_users_views.xml 
+2026-06-12 02:41:40,364 38 INFO odoo odoo.modules.loading: loading base/views/res_users_apikeys_views.xml 
+2026-06-12 02:41:40,372 38 INFO odoo odoo.modules.loading: loading base/views/res_device_views.xml 
+2026-06-12 02:41:40,395 38 INFO odoo odoo.modules.loading: loading base/views/res_users_identitycheck_views.xml 
+2026-06-12 02:41:40,404 38 INFO odoo odoo.modules.loading: loading base/views/res_config_settings_views.xml 
+2026-06-12 02:41:40,412 38 INFO odoo odoo.modules.loading: loading base/views/report_paperformat_views.xml 
+2026-06-12 02:41:40,436 38 INFO odoo odoo.modules.loading: loading base/security/ir.model.access.csv 
+2026-06-12 02:41:40,491 38 INFO odoo odoo.modules.loading: Module base: loading demo 
+2026-06-12 02:41:40,492 38 INFO odoo odoo.modules.loading: loading base/data/res_users_demo.xml 
+2026-06-12 02:41:41,584 38 INFO odoo odoo.modules.loading: loading base/data/res_partner_bank_demo.xml 
+2026-06-12 02:41:41,590 38 INFO odoo odoo.modules.loading: loading base/data/res_currency_demo.xml 
+2026-06-12 02:41:41,599 38 INFO odoo odoo.modules.loading: loading base/data/res_currency_rate_demo.xml 
+2026-06-12 02:41:41,823 38 INFO odoo odoo.modules.loading: loading base/data/res_bank_demo.xml 
+2026-06-12 02:41:41,829 38 INFO odoo odoo.modules.loading: loading base/data/res_partner_demo.xml 
+2026-06-12 02:41:42,001 38 INFO odoo odoo.modules.loading: loading base/data/res_partner_image_demo.xml 
+2026-06-12 02:41:42,420 38 INFO odoo odoo.modules.loading: Module base loaded in 9.19s, 9673 queries (+9673 other) 
+2026-06-12 02:41:42,421 38 INFO odoo odoo.modules.loading: 1 modules loaded in 9.19s, 9673 queries (+9673 extra) 
+2026-06-12 02:41:42,425 38 INFO odoo odoo.modules.loading: updating modules list 
+2026-06-12 02:41:42,426 38 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-06-12 02:41:43,917 38 INFO odoo odoo.modules.loading: loading 14 modules... 
+2026-06-12 02:41:43,918 38 INFO odoo odoo.modules.loading: Loading module rpc (2/14) 
+2026-06-12 02:41:43,951 38 INFO odoo odoo.modules.loading: Module rpc loaded in 0.03s, 9 queries (+9 other) 
+2026-06-12 02:41:43,952 38 INFO odoo odoo.modules.loading: Loading module web (3/14) 
+2026-06-12 02:41:43,990 38 INFO odoo odoo.registry: module web: creating or updating database tables 
+2026-06-12 02:41:44,455 38 INFO odoo odoo.modules.loading: loading web/security/ir.model.access.csv 
+2026-06-12 02:41:44,465 38 INFO odoo odoo.modules.loading: loading web/security/web_security.xml 
+2026-06-12 02:41:44,478 38 INFO odoo odoo.modules.loading: loading web/views/webclient_templates.xml 
+2026-06-12 02:41:44,571 38 INFO odoo odoo.modules.loading: loading web/views/report_templates.xml 
+2026-06-12 02:41:44,753 38 INFO odoo odoo.modules.loading: loading web/views/base_document_layout_views.xml 
+2026-06-12 02:41:44,769 38 INFO odoo odoo.modules.loading: loading web/views/partner_view.xml 
+2026-06-12 02:41:44,777 38 INFO odoo odoo.modules.loading: loading web/views/speedscope_template.xml 
+2026-06-12 02:41:44,785 38 INFO odoo odoo.modules.loading: loading web/views/memory_template.xml 
+2026-06-12 02:41:44,794 38 INFO odoo odoo.modules.loading: loading web/views/speedscope_config_wizard.xml 
+2026-06-12 02:41:44,805 38 INFO odoo odoo.modules.loading: loading web/views/neutralize_views.xml 
+2026-06-12 02:41:44,816 38 INFO odoo odoo.modules.loading: loading web/views/ir_ui_view_views.xml 
+2026-06-12 02:41:44,828 38 INFO odoo odoo.modules.loading: loading web/data/ir_attachment.xml 
+2026-06-12 02:41:44,834 38 INFO odoo odoo.modules.loading: loading web/data/report_layout.xml 
+2026-06-12 02:41:44,848 38 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='company.id' in template 218. Replace by @t-out 
+2026-06-12 02:41:44,849 38 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='font' in template 218. Replace by @t-out 
+2026-06-12 02:41:44,850 38 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 02:41:44,850 38 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='secondary' in template 218. Replace by @t-out 
+2026-06-12 02:41:44,851 38 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 02:41:44,851 38 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 02:41:44,852 38 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 02:41:44,853 38 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 02:41:44,854 38 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='secondary' in template 218. Replace by @t-out 
+2026-06-12 02:41:44,854 38 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='secondary' in template 218. Replace by @t-out 
+2026-06-12 02:41:44,855 38 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 02:41:44,855 38 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='secondary' in template 218. Replace by @t-out 
+2026-06-12 02:41:44,856 38 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='secondary' in template 218. Replace by @t-out 
+2026-06-12 02:41:44,857 38 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='secondary' in template 218. Replace by @t-out 
+2026-06-12 02:41:44,858 38 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='secondary' in template 218. Replace by @t-out 
+2026-06-12 02:41:44,858 38 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='secondary' in template 218. Replace by @t-out 
+2026-06-12 02:41:44,859 38 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 02:41:44,860 38 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 02:41:44,860 38 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 02:41:44,889 38 INFO odoo odoo.modules.loading: Module web loaded in 0.94s, 1316 queries (+1316 other) 
+2026-06-12 02:41:44,890 38 INFO odoo odoo.modules.loading: Loading module api_doc (4/14) 
+2026-06-12 02:41:44,899 38 INFO odoo odoo.registry: module api_doc: creating or updating database tables 
+2026-06-12 02:41:44,913 38 INFO odoo odoo.modules.loading: loading api_doc/security/res_groups.xml 
+2026-06-12 02:41:44,934 38 INFO odoo odoo.modules.loading: loading api_doc/views/docclient.xml 
+2026-06-12 02:41:44,953 38 INFO odoo odoo.modules.loading: Module api_doc loaded in 0.06s, 65 queries (+65 other) 
+2026-06-12 02:41:44,954 38 INFO odoo odoo.modules.loading: Loading module auth_totp (5/14) 
+2026-06-12 02:41:44,979 38 INFO odoo odoo.registry: module auth_totp: creating or updating database tables 
+2026-06-12 02:41:45,095 38 INFO odoo odoo.modules.loading: loading auth_totp/security/security.xml 
+2026-06-12 02:41:45,118 38 INFO odoo odoo.modules.loading: loading auth_totp/security/ir.model.access.csv 
+2026-06-12 02:41:45,125 38 INFO odoo odoo.modules.loading: loading auth_totp/data/ir_action_data.xml 
+2026-06-12 02:41:45,132 38 INFO odoo odoo.modules.loading: loading auth_totp/views/res_users_views.xml 
+2026-06-12 02:41:45,170 38 INFO odoo odoo.modules.loading: loading auth_totp/views/templates.xml 
+2026-06-12 02:41:45,179 38 INFO odoo odoo.modules.loading: loading auth_totp/wizard/auth_totp_wizard_views.xml 
+2026-06-12 02:41:45,203 38 INFO odoo odoo.modules.loading: Module auth_totp loaded in 0.25s, 231 queries (+231 other) 
+2026-06-12 02:41:45,203 38 INFO odoo odoo.modules.loading: Loading module base_import (6/14) 
+2026-06-12 02:41:45,235 38 INFO odoo odoo.registry: module base_import: creating or updating database tables 
+2026-06-12 02:41:45,662 38 INFO odoo odoo.modules.loading: loading base_import/security/ir.model.access.csv 
+2026-06-12 02:41:45,681 38 INFO odoo odoo.modules.loading: Module base_import loaded in 0.48s, 956 queries (+956 other) 
+2026-06-12 02:41:45,681 38 INFO odoo odoo.modules.loading: Loading module base_import_module (7/14) 
+2026-06-12 02:41:45,694 38 INFO odoo odoo.registry: module base_import_module: creating or updating database tables 
+2026-06-12 02:41:45,754 38 INFO odoo odoo.modules.loading: loading base_import_module/security/ir.model.access.csv 
+2026-06-12 02:41:45,760 38 INFO odoo odoo.modules.loading: loading base_import_module/views/base_import_module_view.xml 
+2026-06-12 02:41:45,779 38 INFO odoo odoo.modules.loading: loading base_import_module/views/ir_module_views.xml 
+2026-06-12 02:41:45,839 38 INFO odoo odoo.modules.loading: Module base_import_module loaded in 0.16s, 185 queries (+185 other) 
+2026-06-12 02:41:45,840 38 INFO odoo odoo.modules.loading: Loading module base_setup (8/14) 
+2026-06-12 02:41:45,852 38 INFO odoo odoo.registry: module base_setup: creating or updating database tables 
+2026-06-12 02:41:45,891 38 INFO odoo odoo.modules.loading: loading base_setup/data/base_setup_data.xml 
+2026-06-12 02:41:45,896 38 INFO odoo odoo.modules.loading: loading base_setup/views/res_config_settings_views.xml 
+2026-06-12 02:41:45,924 38 INFO odoo odoo.modules.loading: loading base_setup/views/res_partner_views.xml 
+2026-06-12 02:41:45,946 38 INFO odoo odoo.modules.loading: Module base_setup loaded in 0.11s, 158 queries (+158 other) 
+2026-06-12 02:41:45,947 38 INFO odoo odoo.modules.loading: Loading module bus (9/14) 
+2026-06-12 02:41:45,971 38 INFO odoo odoo.registry: module bus: creating or updating database tables 
+2026-06-12 02:41:46,085 38 INFO odoo odoo.modules.loading: loading bus/security/ir.model.access.csv 
+2026-06-12 02:41:46,102 38 INFO odoo odoo.modules.loading: Module bus loaded in 0.15s, 155 queries (+155 other) 
+2026-06-12 02:41:46,103 38 INFO odoo odoo.modules.loading: Loading module web_tour (10/14) 
+2026-06-12 02:41:46,113 38 INFO odoo odoo.registry: module web_tour: creating or updating database tables 
+2026-06-12 02:41:46,118 38 INFO odoo odoo.models: Prepare computation of res.users.tour_enabled 
+2026-06-12 02:41:46,227 38 INFO odoo odoo.modules.loading: loading web_tour/security/ir.model.access.csv 
+2026-06-12 02:41:46,234 38 INFO odoo odoo.modules.loading: loading web_tour/views/tour_views.xml 
+2026-06-12 02:41:46,276 38 INFO odoo odoo.modules.loading: Module web_tour loaded in 0.17s, 183 queries (+183 other) 
+2026-06-12 02:41:46,277 38 INFO odoo odoo.modules.loading: Loading module auth_passkey (11/14) 
+2026-06-12 02:41:46,347 38 INFO odoo odoo.registry: module auth_passkey: creating or updating database tables 
+2026-06-12 02:41:46,438 38 INFO odoo odoo.modules.loading: loading auth_passkey/views/auth_passkey_key_views.xml 
+2026-06-12 02:41:46,459 38 INFO odoo odoo.modules.loading: loading auth_passkey/views/auth_passkey_login_templates.xml 
+2026-06-12 02:41:46,480 38 INFO odoo odoo.modules.loading: loading auth_passkey/views/res_users_identitycheck_views.xml 
+2026-06-12 02:41:46,493 38 INFO odoo odoo.modules.loading: loading auth_passkey/views/res_users_views.xml 
+2026-06-12 02:41:46,523 38 INFO odoo odoo.modules.loading: loading auth_passkey/security/ir.model.access.csv 
+2026-06-12 02:41:46,531 38 INFO odoo odoo.modules.loading: loading auth_passkey/security/security.xml 
+2026-06-12 02:41:46,562 38 INFO odoo odoo.modules.loading: Module auth_passkey loaded in 0.28s, 239 queries (+239 other) 
+2026-06-12 02:41:46,562 38 INFO odoo odoo.modules.loading: Loading module html_editor (12/14) 
+2026-06-12 02:41:46,816 38 INFO odoo odoo.registry: module html_editor: creating or updating database tables 
+2026-06-12 02:41:47,291 38 INFO odoo odoo.modules.loading: loading html_editor/security/ir.model.access.csv 
+2026-06-12 02:41:47,312 38 INFO odoo odoo.modules.loading: Module html_editor loaded in 0.75s, 1034 queries (+1034 other) 
+2026-06-12 02:41:47,312 38 INFO odoo odoo.modules.loading: Loading module iap (13/14) 
+2026-06-12 02:41:47,316 38 INFO odoo odoo.registry: module iap: creating or updating database tables 
+2026-06-12 02:41:47,426 38 INFO odoo odoo.modules.loading: loading iap/data/services.xml 
+2026-06-12 02:41:47,433 38 INFO odoo odoo.modules.loading: loading iap/security/ir.model.access.csv 
+2026-06-12 02:41:47,442 38 INFO odoo odoo.modules.loading: loading iap/security/ir_rule.xml 
+2026-06-12 02:41:47,450 38 INFO odoo odoo.modules.loading: loading iap/views/iap_views.xml 
+2026-06-12 02:41:47,474 38 INFO odoo odoo.modules.loading: loading iap/views/res_config_settings.xml 
+2026-06-12 02:41:47,512 38 INFO odoo odoo.modules.loading: Module iap loaded in 0.20s, 194 queries (+194 other) 
+2026-06-12 02:41:47,513 38 INFO odoo odoo.modules.loading: Loading module web_unsplash (14/14) 
+2026-06-12 02:41:47,523 38 INFO odoo odoo.registry: module web_unsplash: creating or updating database tables 
+2026-06-12 02:41:47,555 38 INFO odoo odoo.modules.loading: loading web_unsplash/views/res_config_settings_view.xml 
+2026-06-12 02:41:47,594 38 INFO odoo odoo.modules.loading: Module web_unsplash loaded in 0.08s, 103 queries (+103 other) 
+2026-06-12 02:41:47,595 38 INFO odoo odoo.modules.loading: 14 modules loaded in 3.68s, 4828 queries (+4828 extra) 
+2026-06-12 02:41:47,782 38 INFO odoo odoo.modules.loading: Modules loaded. 
+2026-06-12 02:41:47,789 38 INFO odoo odoo.registry: Registry changed, signaling through the database 
+2026-06-12 02:41:47,794 38 INFO odoo odoo.registry: Registry loaded in 17.181s 
+2026-06-12 02:41:47,795 38 INFO odoo odoo.service.server: Initiating shutdown 
+2026-06-12 02:41:47,795 38 INFO odoo odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-06-12 02:41:47,795 38 INFO odoo odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-06-12 02:42:22,405 1 INFO odoo odoo.registry: Reloading the model registry after database signaling. 
+2026-06-12 02:42:22,414 1 INFO odoo odoo.modules.loading: loading 1 modules... 
+2026-06-12 02:42:22,417 1 INFO odoo odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-06-12 02:42:22,422 1 INFO odoo odoo.modules.loading: loading 14 modules... 
+2026-06-12 02:42:22,610 1 INFO odoo odoo.modules.loading: 14 modules loaded in 0.19s, 0 queries (+0 extra) 
+2026-06-12 02:42:22,641 1 INFO odoo odoo.modules.loading: Modules loaded. 
+2026-06-12 02:42:22,648 1 INFO odoo odoo.registry: Registry loaded in 0.242s 
+2026-06-12 02:42:22,650 1 INFO odoo odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) starting 
+2026-06-12 02:42:22,767 1 INFO odoo odoo.addons.api_doc.models.ir_attachment: GC'd 0 /doc cached index 
+2026-06-12 02:42:22,772 1 INFO odoo odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-06-12 02:42:22,790 1 INFO odoo odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-06-12 02:42:22,803 1 INFO odoo odoo.addons.base.models.ir_attachment: filestore gc 60 checked, 0 removed 
+2026-06-12 02:42:22,861 1 INFO odoo odoo.addons.base.models.res_users: GC 'auth_totp.device' delete 0 entries 
+2026-06-12 02:42:22,881 1 INFO odoo odoo.addons.base.models.res_users: GC'd 0 user log entries 
+2026-06-12 02:42:22,892 1 INFO odoo odoo.addons.base.models.res_users: GC 'res.users.apikeys' delete 0 entries 
+2026-06-12 02:42:22,904 1 INFO odoo odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) fully done (#loop 1; done 0; remaining 0; duration 0.25s) 
+2026-06-12 02:42:22,915 1 INFO odoo odoo.addons.base.models.ir_cron: Job 'Base: Portal Users Deletion' (2) starting 
+2026-06-12 02:42:22,934 1 INFO odoo odoo.addons.base.models.ir_cron: Job 'Base: Portal Users Deletion' (2) fully done (#loop 1; done 0; remaining 0; duration 0.02s) 
+2026-06-12 02:42:22,959 1 INFO odoo odoo.service.server: Initiating shutdown 
+2026-06-12 02:42:22,960 1 INFO odoo odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-06-12 02:42:23,305 1 INFO odoo odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 4 connections  
+2026-06-12 02:42:23,306 1 INFO ? odoo.service.server: cron0 max age (0s) reached, releasing connection. 
+2026-06-12 02:42:24,357 1 WARNING ? odoo.tools.config: option log_db reads 'False' in the config file at /etc/odoo/odoo.conf but isn't a boolean option, skip 
+2026-06-12 02:42:24,358 1 WARNING ? odoo.tools.config: unknown option 'translate_modules' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 02:42:24,358 1 WARNING ? odoo.tools.config: unknown option 'longpolling_port' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 02:42:24,358 1 WARNING ? odoo.tools.config: option log_db reads 'False' in the config file at /etc/odoo/odoo.conf but isn't a boolean option, skip 
+2026-06-12 02:42:24,359 1 WARNING ? odoo.tools.config: unknown option 'translate_modules' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 02:42:24,359 1 WARNING ? odoo.tools.config: unknown option 'longpolling_port' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 02:42:24,359 1 WARNING ? odoo.tools.config: missing --http-interface/http_interface, using 0.0.0.0 by default, will change to 127.0.0.1 in 20.0 
+2026-06-12 02:42:24,360 1 INFO ? odoo: Odoo version 19.0-20260609 
+2026-06-12 02:42:24,361 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-06-12 02:42:24,361 1 INFO ? odoo: addons paths: _NamespacePath(['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/19.0', '/mnt/extra-addons', '/usr/lib/python3/dist-packages/addons']) 
+2026-06-12 02:42:24,361 1 INFO ? odoo: database: odoo@db:5432 
+2026-06-12 02:42:24,555 1 INFO ? odoo.service.server: Watching addons folder /usr/lib/python3/dist-packages/odoo/addons 
+2026-06-12 02:42:24,555 1 INFO ? odoo.service.server: Watching addons folder /var/lib/odoo/addons/19.0 
+2026-06-12 02:42:24,556 1 INFO ? odoo.service.server: Watching addons folder /mnt/extra-addons 
+2026-06-12 02:42:24,556 1 INFO ? odoo.service.server: Watching addons folder /usr/lib/python3/dist-packages/addons 
+2026-06-12 02:43:06,206 1 INFO ? odoo.service.server: AutoReload watcher running with watchdog 
+2026-06-12 02:43:06,234 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on de2a1499a7e7:8069 
+2026-06-12 02:43:06,246 1 INFO odoo odoo.modules.loading: loading 1 modules... 
+2026-06-12 02:43:06,249 1 INFO odoo odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-06-12 02:43:06,255 1 INFO odoo odoo.modules.loading: loading 14 modules... 
+2026-06-12 02:43:06,457 1 INFO odoo odoo.modules.loading: 14 modules loaded in 0.20s, 0 queries (+0 extra) 
+2026-06-12 02:43:06,484 1 INFO odoo odoo.modules.loading: Modules loaded. 
+2026-06-12 02:43:06,494 1 INFO odoo odoo.registry: Registry loaded in 0.258s 
+2026-06-12 02:43:32,299 1 INFO odoo odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-06-12 02:43:32,309 1 INFO odoo werkzeug: 127.0.0.1 - - [12/Jun/2026 02:43:32] "GET / HTTP/1.1" 303 - 5 0.002 0.010
+2026-06-12 02:44:06,561 1 INFO odoo odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) starting 
+2026-06-12 02:44:06,693 1 INFO odoo odoo.addons.base.models.res_users: GC'd 0 user log entries 
+2026-06-12 02:44:06,697 1 INFO odoo odoo.addons.base.models.res_users: GC 'auth_totp.device' delete 0 entries 
+2026-06-12 02:44:06,710 1 INFO odoo odoo.addons.base.models.res_users: GC 'res.users.apikeys' delete 0 entries 
+2026-06-12 02:44:06,725 1 INFO odoo odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed 
+2026-06-12 02:44:06,751 1 INFO odoo odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-06-12 02:44:06,759 1 INFO odoo odoo.addons.api_doc.models.ir_attachment: GC'd 0 /doc cached index 
+2026-06-12 02:44:06,768 1 INFO odoo odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-06-12 02:44:06,789 1 INFO odoo odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) fully done (#loop 1; done 0; remaining 0; duration 0.23s) 
+2026-06-12 02:44:38,128 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:44:38] "GET / HTTP/1.1" 303 - 4 0.003 0.004
+2026-06-12 02:44:38,139 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:44:38] "GET /odoo HTTP/1.1" 303 - 4 0.002 0.003
+2026-06-12 02:44:38,175 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 02:44:38,176 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 02:44:38,186 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 02:44:38,187 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 02:44:38,197 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc="title or 'Odoo'" in template 185. Replace by @t-out 
+2026-06-12 02:44:38,198 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='request.csrf_token(None)' in template 185. Replace by @t-out 
+2026-06-12 02:44:38,198 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='debug' in template 185. Replace by @t-out 
+2026-06-12 02:44:38,378 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:44:38] "GET /web/login?redirect=/odoo? HTTP/1.1" 200 - 61 0.019 0.216
+2026-06-12 02:44:38,407 1 INFO ? werkzeug: 172.18.0.1 - - [12/Jun/2026 02:44:38] "GET /web/static/src/libs/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 - 0 0.000 0.003
+2026-06-12 02:44:38,414 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:44:38] "GET /web/binary/company_logo HTTP/1.1" 200 - 5 0.003 0.005
+2026-06-12 02:44:38,450 1 INFO odoo odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/97f7589/web.assets_frontend_minimal.min.js (id:199) 
+2026-06-12 02:44:38,456 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:44:38] "GET /web/assets/97f7589/web.assets_frontend_minimal.min.js HTTP/1.1" 200 - 15 0.007 0.028
+2026-06-12 02:44:39,120 1 INFO odoo odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/c5b61e8/web.assets_frontend.min.css (id:200) 
+2026-06-12 02:44:39,125 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:44:39] "GET /web/assets/c5b61e8/web.assets_frontend.min.css HTTP/1.1" 200 - 22 0.017 0.705
+2026-06-12 02:44:39,164 1 INFO ? werkzeug: 172.18.0.1 - - [12/Jun/2026 02:44:39] "GET /web/static/img/favicon.ico HTTP/1.1" 200 - 0 0.000 0.002
+2026-06-12 02:44:39,646 1 INFO odoo odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/837141c/web.assets_frontend_lazy.min.js (id:201) 
+2026-06-12 02:44:39,649 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:44:39] "GET /web/assets/837141c/web.assets_frontend_lazy.min.js HTTP/1.1" 200 - 23 0.006 0.482
+2026-06-12 02:44:39,760 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:44:39] "GET /web/webclient/translations?hash=&lang= HTTP/1.1" 200 - 6 0.001 0.004
+2026-06-12 02:45:15,657 1 INFO odoo odoo.addons.base.models.res_users: Login failed for login:admin@local.com from 172.18.0.1 
+2026-06-12 02:45:15,685 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 02:45:15,686 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 02:45:15,696 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 02:45:15,697 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 02:45:15,706 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc="title or 'Odoo'" in template 185. Replace by @t-out 
+2026-06-12 02:45:15,708 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='request.csrf_token(None)' in template 185. Replace by @t-out 
+2026-06-12 02:45:15,708 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='debug' in template 185. Replace by @t-out 
+2026-06-12 02:45:15,879 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:45:15] "POST /web/login HTTP/1.1" 200 - 52 0.016 0.211
+2026-06-12 02:45:15,907 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:45:15] "GET /web/binary/company_logo HTTP/1.1" 304 - 5 0.003 0.005
+2026-06-12 02:45:15,949 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:45:15] "GET /web/webclient/translations?hash=f6edbf8f3d4b4718c81674d8056d895de3641cc4&lang= HTTP/1.1" 200 - 5 0.002 0.004
+2026-06-12 02:45:26,589 1 INFO odoo odoo.addons.base.models.res_users: Login failed for login:admin@local.com from 172.18.0.1 
+2026-06-12 02:45:26,618 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 02:45:26,619 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 02:45:26,629 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 02:45:26,630 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 02:45:26,640 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc="title or 'Odoo'" in template 185. Replace by @t-out 
+2026-06-12 02:45:26,641 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='request.csrf_token(None)' in template 185. Replace by @t-out 
+2026-06-12 02:45:26,642 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='debug' in template 185. Replace by @t-out 
+2026-06-12 02:45:26,801 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:45:26] "POST /web/login HTTP/1.1" 200 - 50 0.016 0.203
+2026-06-12 02:45:26,828 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:45:26] "GET /web/binary/company_logo HTTP/1.1" 304 - 5 0.002 0.004
+2026-06-12 02:45:26,857 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:45:26] "GET /web/webclient/translations?hash=f6edbf8f3d4b4718c81674d8056d895de3641cc4&lang= HTTP/1.1" 200 - 5 0.002 0.004
+2026-06-12 02:45:27,667 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:45:27] "POST /auth/passkey/start-auth HTTP/1.1" 200 - 6 0.001 0.003
+2026-06-12 02:46:47,957 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:46:47] "GET /database/manager HTTP/1.1" 404 - 3 0.001 0.003
+2026-06-12 02:46:48,018 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:46:48] "GET /favicon.ico HTTP/1.1" 404 - 3 0.001 0.003
+2026-06-12 02:48:52,209 1 INFO odoo odoo.addons.base.models.res_users: Login failed for login:valegchemes@gmail.com from 172.18.0.1 
+2026-06-12 02:48:52,237 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 02:48:52,238 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 02:48:52,247 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 02:48:52,248 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 02:48:52,258 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc="title or 'Odoo'" in template 185. Replace by @t-out 
+2026-06-12 02:48:52,260 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='request.csrf_token(None)' in template 185. Replace by @t-out 
+2026-06-12 02:48:52,261 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='debug' in template 185. Replace by @t-out 
+2026-06-12 02:48:52,466 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:48:52] "POST /web/login HTTP/1.1" 200 - 50 0.015 0.248
+2026-06-12 02:48:52,495 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:48:52] "GET /web/binary/company_logo HTTP/1.1" 304 - 5 0.002 0.004
+2026-06-12 02:48:52,524 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:48:52] "GET /web/webclient/translations?hash=f6edbf8f3d4b4718c81674d8056d895de3641cc4&lang= HTTP/1.1" 200 - 5 0.001 0.003
+2026-06-12 02:49:19,585 1 INFO odoo odoo.addons.base.models.res_users: Login failed for login:admin@local.com from 172.18.0.1 
+2026-06-12 02:49:19,613 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 02:49:19,615 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 02:49:19,624 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 02:49:19,625 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 02:49:19,637 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc="title or 'Odoo'" in template 185. Replace by @t-out 
+2026-06-12 02:49:19,638 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='request.csrf_token(None)' in template 185. Replace by @t-out 
+2026-06-12 02:49:19,639 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='debug' in template 185. Replace by @t-out 
+2026-06-12 02:49:19,803 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:49:19] "POST /web/login HTTP/1.1" 200 - 50 0.017 0.208
+2026-06-12 02:49:19,832 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:49:19] "GET /web/binary/company_logo HTTP/1.1" 304 - 5 0.003 0.005
+2026-06-12 02:49:19,863 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:49:19] "GET /web/webclient/translations?hash=f6edbf8f3d4b4718c81674d8056d895de3641cc4&lang= HTTP/1.1" 200 - 5 0.001 0.004
+2026-06-12 02:51:22,813 1 INFO odoo odoo.addons.base.models.res_users: Login failed for login:valegchemes@gmail.com from 172.18.0.1 
+2026-06-12 02:51:22,840 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 02:51:22,841 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 02:51:22,850 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 02:51:22,851 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 02:51:22,861 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc="title or 'Odoo'" in template 185. Replace by @t-out 
+2026-06-12 02:51:22,862 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='request.csrf_token(None)' in template 185. Replace by @t-out 
+2026-06-12 02:51:22,863 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='debug' in template 185. Replace by @t-out 
+2026-06-12 02:51:23,031 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:51:23] "POST /web/login HTTP/1.1" 200 - 50 0.015 0.209
+2026-06-12 02:51:23,070 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:51:23] "GET /web/binary/company_logo HTTP/1.1" 304 - 5 0.002 0.004
+2026-06-12 02:51:23,099 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:51:23] "GET /web/webclient/translations?hash=f6edbf8f3d4b4718c81674d8056d895de3641cc4&lang= HTTP/1.1" 200 - 5 0.002 0.003
+2026-06-12 02:51:29,617 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:51:29] "GET /database/manager HTTP/1.1" 404 - 3 0.003 0.004
+2026-06-12 02:53:18,486 1 INFO odoo odoo.service.server: Initiating shutdown 
+2026-06-12 02:53:18,487 1 INFO odoo odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-06-12 02:53:20,838 1 WARNING ? odoo.tools.config: option log_db reads 'False' in the config file at /etc/odoo/odoo.conf but isn't a boolean option, skip 
+2026-06-12 02:53:20,838 1 WARNING ? odoo.tools.config: unknown option 'translate_modules' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 02:53:20,839 1 WARNING ? odoo.tools.config: unknown option 'longpolling_port' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 02:53:20,839 1 WARNING ? odoo.tools.config: option log_db reads 'False' in the config file at /etc/odoo/odoo.conf but isn't a boolean option, skip 
+2026-06-12 02:53:20,840 1 WARNING ? odoo.tools.config: unknown option 'translate_modules' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 02:53:20,840 1 WARNING ? odoo.tools.config: unknown option 'longpolling_port' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 02:53:20,841 1 WARNING ? odoo.tools.config: missing --http-interface/http_interface, using 0.0.0.0 by default, will change to 127.0.0.1 in 20.0 
+2026-06-12 02:53:20,841 1 INFO ? odoo: Odoo version 19.0-20260609 
+2026-06-12 02:53:20,842 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-06-12 02:53:20,842 1 INFO ? odoo: addons paths: _NamespacePath(['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/19.0', '/mnt/extra-addons', '/usr/lib/python3/dist-packages/addons']) 
+2026-06-12 02:53:20,843 1 INFO ? odoo: database: odoo@db:5432 
+2026-06-12 02:53:21,254 1 INFO ? odoo.service.server: Watching addons folder /usr/lib/python3/dist-packages/odoo/addons 
+2026-06-12 02:53:21,255 1 INFO ? odoo.service.server: Watching addons folder /var/lib/odoo/addons/19.0 
+2026-06-12 02:53:21,256 1 INFO ? odoo.service.server: Watching addons folder /mnt/extra-addons 
+2026-06-12 02:53:21,256 1 INFO ? odoo.service.server: Watching addons folder /usr/lib/python3/dist-packages/addons 
+2026-06-12 02:54:09,519 1 INFO ? odoo.service.server: AutoReload watcher running with watchdog 
+2026-06-12 02:54:09,520 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on de2a1499a7e7:8069 
+2026-06-12 02:54:09,566 1 INFO odoo odoo.modules.loading: loading 1 modules... 
+2026-06-12 02:54:09,569 1 INFO odoo odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-06-12 02:54:09,577 1 INFO odoo odoo.modules.loading: loading 14 modules... 
+2026-06-12 02:54:09,874 1 INFO odoo odoo.modules.loading: 14 modules loaded in 0.30s, 0 queries (+0 extra) 
+2026-06-12 02:54:09,897 1 INFO odoo odoo.modules.loading: Modules loaded. 
+2026-06-12 02:54:09,907 1 INFO odoo odoo.registry: Registry loaded in 0.385s 
+2026-06-12 02:54:15,759 1 INFO odoo odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-06-12 02:54:15,772 1 INFO odoo odoo.addons.base.models.res_users: Login failed for login:valegchemes@gmail.com from 172.18.0.1 
+2026-06-12 02:54:15,814 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 02:54:15,815 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 02:54:15,825 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 02:54:15,826 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 02:54:15,835 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc="title or 'Odoo'" in template 185. Replace by @t-out 
+2026-06-12 02:54:15,836 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='request.csrf_token(None)' in template 185. Replace by @t-out 
+2026-06-12 02:54:15,837 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='debug' in template 185. Replace by @t-out 
+2026-06-12 02:54:16,057 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:54:16] "POST /web/login HTTP/1.1" 200 - 67 0.026 0.275
+2026-06-12 02:54:16,089 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:54:16] "GET /web/binary/company_logo HTTP/1.1" 304 - 5 0.002 0.007
+2026-06-12 02:54:16,135 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:54:16] "GET /web/webclient/translations?hash=f6edbf8f3d4b4718c81674d8056d895de3641cc4&lang= HTTP/1.1" 200 - 6 0.002 0.004
+2026-06-12 02:54:19,276 1 INFO odoo odoo.addons.base.models.res_users: Login failed for login:valegchemes@gmail.com from 172.18.0.1 
+2026-06-12 02:54:19,302 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 02:54:19,304 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 02:54:19,314 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 02:54:19,315 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 02:54:19,323 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc="title or 'Odoo'" in template 185. Replace by @t-out 
+2026-06-12 02:54:19,324 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='request.csrf_token(None)' in template 185. Replace by @t-out 
+2026-06-12 02:54:19,325 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='debug' in template 185. Replace by @t-out 
+2026-06-12 02:54:19,491 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:54:19] "POST /web/login HTTP/1.1" 200 - 50 0.015 0.204
+2026-06-12 02:54:19,518 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:54:19] "GET /web/binary/company_logo HTTP/1.1" 304 - 5 0.003 0.004
+2026-06-12 02:54:19,548 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:54:19] "GET /web/webclient/translations?hash=f6edbf8f3d4b4718c81674d8056d895de3641cc4&lang= HTTP/1.1" 200 - 5 0.002 0.004
+2026-06-12 02:56:07,895 1 INFO odoo odoo.service.server: Initiating shutdown 
+2026-06-12 02:56:07,897 1 INFO odoo odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-06-12 02:56:08,169 1 INFO odoo odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 2 connections  
+2026-06-12 02:56:08,171 1 INFO ? odoo.service.server: cron0 max age (0s) reached, releasing connection. 
+2026-06-12 02:56:21,651 1 WARNING ? odoo.tools.config: option log_db reads 'False' in the config file at /etc/odoo/odoo.conf but isn't a boolean option, skip 
+2026-06-12 02:56:21,651 1 WARNING ? odoo.tools.config: unknown option 'translate_modules' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 02:56:21,652 1 WARNING ? odoo.tools.config: unknown option 'longpolling_port' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 02:56:21,652 1 WARNING ? odoo.tools.config: option log_db reads 'False' in the config file at /etc/odoo/odoo.conf but isn't a boolean option, skip 
+2026-06-12 02:56:21,653 1 WARNING ? odoo.tools.config: unknown option 'translate_modules' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 02:56:21,654 1 WARNING ? odoo.tools.config: unknown option 'longpolling_port' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 02:56:21,655 1 WARNING ? odoo.tools.config: missing --http-interface/http_interface, using 0.0.0.0 by default, will change to 127.0.0.1 in 20.0 
+2026-06-12 02:56:21,656 1 INFO ? odoo: Odoo version 19.0-20260609 
+2026-06-12 02:56:21,657 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-06-12 02:56:21,658 1 INFO ? odoo: addons paths: _NamespacePath(['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/19.0', '/mnt/extra-addons', '/usr/lib/python3/dist-packages/addons']) 
+2026-06-12 02:56:21,659 1 INFO ? odoo: database: odoo@db:5432 
+2026-06-12 02:56:22,135 1 INFO ? odoo.service.server: Watching addons folder /usr/lib/python3/dist-packages/odoo/addons 
+2026-06-12 02:56:22,136 1 INFO ? odoo.service.server: Watching addons folder /var/lib/odoo/addons/19.0 
+2026-06-12 02:56:22,136 1 INFO ? odoo.service.server: Watching addons folder /mnt/extra-addons 
+2026-06-12 02:56:22,137 1 INFO ? odoo.service.server: Watching addons folder /usr/lib/python3/dist-packages/addons 
+2026-06-12 02:57:13,761 1 INFO ? odoo.service.server: AutoReload watcher running with watchdog 
+2026-06-12 02:57:13,762 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 4fa88078808c:8069 
+2026-06-12 02:57:13,828 1 ERROR odoo odoo.modules.loading: Database odoo not initialized, you can force it with `-i base` 
+2026-06-12 02:57:13,829 1 INFO odoo odoo.registry: Registry loaded in 0.065s 
+2026-06-12 02:57:59,444 1 ERROR odoo odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 2829, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 2258, in _serve_db
+    rule, args = self.registry['ir.http']._match(self.httprequest.path)
+                 ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/orm/registry.py", line 335, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2026-06-12 02:57:59,452 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:57:59] "POST /web/login HTTP/1.1" 500 - 1 0.001 0.009
+2026-06-12 02:57:59,503 1 ERROR odoo odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 2829, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 2258, in _serve_db
+    rule, args = self.registry['ir.http']._match(self.httprequest.path)
+                 ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/orm/registry.py", line 335, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2026-06-12 02:57:59,505 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:57:59] "GET /favicon.ico HTTP/1.1" 500 - 1 0.000 0.003
+2026-06-12 02:58:13,887 1 ERROR odoo odoo.sql_db: bad query: b"\n            SELECT latest_version\n            FROM ir_module_module\n             WHERE name='base'\n        "
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2026-06-12 02:58:13,889 1 WARNING odoo odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo. 
+2026-06-12 02:58:54,534 1 ERROR odoo odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 2829, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 2258, in _serve_db
+    rule, args = self.registry['ir.http']._match(self.httprequest.path)
+                 ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/orm/registry.py", line 335, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2026-06-12 02:58:54,535 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:58:54] "POST /web/login HTTP/1.1" 500 - 1 0.000 0.002
+2026-06-12 02:58:54,572 1 ERROR odoo odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 2829, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 2258, in _serve_db
+    rule, args = self.registry['ir.http']._match(self.httprequest.path)
+                 ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/orm/registry.py", line 335, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2026-06-12 02:58:54,574 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:58:54] "GET /favicon.ico HTTP/1.1" 500 - 1 0.001 0.003
+2026-06-12 02:59:13,951 1 ERROR odoo odoo.sql_db: bad query: b"\n            SELECT latest_version\n            FROM ir_module_module\n             WHERE name='base'\n        "
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2026-06-12 02:59:13,952 1 WARNING odoo odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo. 
+2026-06-12 02:59:50,766 1 ERROR odoo odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 2829, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 2258, in _serve_db
+    rule, args = self.registry['ir.http']._match(self.httprequest.path)
+                 ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/orm/registry.py", line 335, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2026-06-12 02:59:50,768 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:59:50] "GET /web/database/manager HTTP/1.1" 500 - 1 0.001 0.003
+2026-06-12 02:59:50,801 1 ERROR odoo odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 2829, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 2258, in _serve_db
+    rule, args = self.registry['ir.http']._match(self.httprequest.path)
+                 ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/orm/registry.py", line 335, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ir.http'
+2026-06-12 02:59:50,802 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 02:59:50] "GET /favicon.ico HTTP/1.1" 500 - 1 0.001 0.002
+2026-06-12 03:00:13,979 1 ERROR odoo odoo.sql_db: bad query: b"\n            SELECT latest_version\n            FROM ir_module_module\n             WHERE name='base'\n        "
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2026-06-12 03:00:13,980 1 WARNING odoo odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo. 
+2026-06-12 03:00:24,033 37 WARNING ? odoo.tools.config: option log_db reads 'False' in the config file at /etc/odoo/odoo.conf but isn't a boolean option, skip 
+2026-06-12 03:00:24,033 37 WARNING ? odoo.tools.config: unknown option 'translate_modules' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 03:00:24,034 37 WARNING ? odoo.tools.config: unknown option 'longpolling_port' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 03:00:24,034 37 WARNING ? odoo.tools.config: option log_db reads 'False' in the config file at /etc/odoo/odoo.conf but isn't a boolean option, skip 
+2026-06-12 03:00:24,035 37 WARNING ? odoo.tools.config: unknown option 'translate_modules' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 03:00:24,035 37 WARNING ? odoo.tools.config: unknown option 'longpolling_port' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 03:00:24,035 37 WARNING ? odoo.tools.config: missing --http-interface/http_interface, using 0.0.0.0 by default, will change to 127.0.0.1 in 20.0 
+2026-06-12 03:00:24,036 37 INFO ? odoo: Odoo version 19.0-20260609 
+2026-06-12 03:00:24,037 37 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-06-12 03:00:24,037 37 INFO ? odoo: addons paths: _NamespacePath(['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/19.0', '/mnt/extra-addons', '/usr/lib/python3/dist-packages/addons']) 
+2026-06-12 03:00:24,037 37 INFO ? odoo: database: odoo@db:5432 
+2026-06-12 03:00:24,259 37 INFO ? odoo.service.server: Watching addons folder /usr/lib/python3/dist-packages/odoo/addons 
+2026-06-12 03:00:24,259 37 INFO ? odoo.service.server: Watching addons folder /var/lib/odoo/addons/19.0 
+2026-06-12 03:00:24,260 37 INFO ? odoo.service.server: Watching addons folder /mnt/extra-addons 
+2026-06-12 03:00:24,261 37 INFO ? odoo.service.server: Watching addons folder /usr/lib/python3/dist-packages/addons 
+2026-06-12 03:00:37,279 49 WARNING ? odoo.tools.config: option log_db reads 'False' in the config file at /etc/odoo/odoo.conf but isn't a boolean option, skip 
+2026-06-12 03:00:37,280 49 WARNING ? odoo.tools.config: unknown option 'translate_modules' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 03:00:37,281 49 WARNING ? odoo.tools.config: unknown option 'longpolling_port' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 03:00:37,282 49 WARNING ? odoo.tools.config: option log_db reads 'False' in the config file at /etc/odoo/odoo.conf but isn't a boolean option, skip 
+2026-06-12 03:00:37,282 49 WARNING ? odoo.tools.config: unknown option 'translate_modules' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 03:00:37,283 49 WARNING ? odoo.tools.config: unknown option 'longpolling_port' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 03:00:37,283 49 WARNING ? odoo.tools.config: missing --http-interface/http_interface, using 0.0.0.0 by default, will change to 127.0.0.1 in 20.0 
+2026-06-12 03:00:37,284 49 INFO ? odoo: Odoo version 19.0-20260609 
+2026-06-12 03:00:37,284 49 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-06-12 03:00:37,285 49 INFO ? odoo: addons paths: _NamespacePath(['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/19.0', '/mnt/extra-addons', '/usr/lib/python3/dist-packages/addons']) 
+2026-06-12 03:00:37,285 49 INFO ? odoo: database: odoo@db:5432 
+2026-06-12 03:00:37,521 49 INFO ? odoo.service.server: Watching addons folder /usr/lib/python3/dist-packages/odoo/addons 
+2026-06-12 03:00:37,521 49 INFO ? odoo.service.server: Watching addons folder /var/lib/odoo/addons/19.0 
+2026-06-12 03:00:37,522 49 INFO ? odoo.service.server: Watching addons folder /mnt/extra-addons 
+2026-06-12 03:00:37,522 49 INFO ? odoo.service.server: Watching addons folder /usr/lib/python3/dist-packages/addons 
+2026-06-12 03:01:13,308 37 INFO ? odoo.service.server: AutoReload watcher running with watchdog 
+2026-06-12 03:01:13,319 37 INFO odoo odoo.modules.loading: Initializing database odoo 
+2026-06-12 03:01:13,980 1 ERROR odoo odoo.sql_db: bad query: b"\n            SELECT latest_version\n            FROM ir_module_module\n             WHERE name='base'\n        "
+ERROR: relation "ir_module_module" does not exist
+LINE 3:             FROM ir_module_module
+                         ^
+ 
+2026-06-12 03:01:13,980 1 WARNING odoo odoo.addons.base.models.ir_cron: Tried to poll an undefined table on database odoo. 
+2026-06-12 03:01:15,751 37 INFO odoo odoo.modules.loading: loading 1 modules... 
+2026-06-12 03:01:15,751 37 INFO odoo odoo.modules.loading: Loading module base (1/1) 
+2026-06-12 03:01:15,773 37 INFO odoo odoo.registry: module base: creating or updating database tables 
+2026-06-12 03:01:16,718 37 INFO odoo odoo.models: Prepare computation of ir.module.module.menus_by_module 
+2026-06-12 03:01:16,719 37 INFO odoo odoo.models: Prepare computation of ir.module.module.reports_by_module 
+2026-06-12 03:01:16,720 37 INFO odoo odoo.models: Prepare computation of ir.module.module.views_by_module 
+2026-06-12 03:01:17,026 37 INFO odoo odoo.models: Prepare computation of res.partner.user_id 
+2026-06-12 03:01:17,026 37 INFO odoo odoo.models: Prepare computation of res.partner.commercial_partner_id 
+2026-06-12 03:01:17,027 37 INFO odoo odoo.models: Prepare computation of res.partner.complete_name 
+2026-06-12 03:01:17,027 37 INFO odoo odoo.models: Prepare computation of res.partner.lang 
+2026-06-12 03:01:17,028 37 INFO odoo odoo.models: Prepare computation of res.partner.company_registry 
+2026-06-12 03:01:17,028 37 INFO odoo odoo.models: Prepare computation of res.partner.commercial_company_name 
+2026-06-12 03:01:17,028 37 INFO odoo odoo.models: Prepare computation of res.partner.properties 
+2026-06-12 03:01:17,029 37 INFO odoo odoo.models: Prepare computation of res.partner.partner_share 
+2026-06-12 03:01:17,105 37 INFO odoo odoo.models: Prepare computation of res.currency.decimal_places 
+2026-06-12 03:01:17,161 37 INFO odoo odoo.models: Prepare computation of res.company.uses_default_logo 
+2026-06-12 03:01:17,162 37 INFO odoo odoo.models: Prepare computation of res.company.logo_web 
+2026-06-12 03:01:17,170 37 INFO odoo odoo.models: Computing parent_path for table res_company... 
+2026-06-12 03:01:17,242 37 INFO odoo odoo.models: Prepare computation of res.users.signature 
+2026-06-12 03:01:17,243 37 INFO odoo odoo.models: Prepare computation of res.users.share 
+2026-06-12 03:01:19,201 37 INFO odoo odoo.modules.loading: loading base/data/res_bank.xml 
+2026-06-12 03:01:19,213 37 INFO odoo odoo.modules.loading: loading base/data/res.lang.csv 
+2026-06-12 03:01:19,247 37 INFO odoo odoo.modules.loading: loading base/data/res_lang_data.xml 
+2026-06-12 03:01:19,292 37 INFO odoo odoo.modules.loading: loading base/data/res_partner_data.xml 
+2026-06-12 03:01:19,341 37 INFO odoo odoo.modules.loading: loading base/data/res_currency_data.xml 
+2026-06-12 03:01:19,829 37 INFO odoo odoo.modules.loading: loading base/data/res_company_data.xml 
+2026-06-12 03:01:19,838 37 INFO odoo odoo.modules.loading: loading base/data/res_users_data.xml 
+2026-06-12 03:01:20,606 37 INFO odoo odoo.modules.loading: loading base/data/report_paperformat_data.xml 
+2026-06-12 03:01:20,615 37 INFO odoo odoo.modules.loading: loading base/data/res_country_data.xml 
+2026-06-12 03:01:21,135 37 INFO odoo odoo.modules.loading: loading base/data/ir_demo_data.xml 
+2026-06-12 03:01:21,147 37 INFO odoo odoo.modules.loading: loading base/security/base_groups.xml 
+2026-06-12 03:01:21,313 37 INFO odoo odoo.modules.loading: loading base/security/base_security.xml 
+2026-06-12 03:01:21,472 37 INFO odoo odoo.modules.loading: loading base/wizard/wizard_ir_model_menu_create_views.xml 
+2026-06-12 03:01:21,484 37 INFO odoo odoo.modules.loading: loading base/views/base_menus.xml 
+2026-06-12 03:01:21,545 37 INFO odoo odoo.modules.loading: loading base/views/decimal_precision_views.xml 
+2026-06-12 03:01:21,569 37 INFO odoo odoo.modules.loading: loading base/views/res_config_views.xml 
+2026-06-12 03:01:21,577 37 INFO odoo odoo.modules.loading: loading base/data/res.country.state.csv 
+2026-06-12 03:01:21,846 37 INFO odoo odoo.modules.loading: loading base/views/ir_actions_views.xml 
+2026-06-12 03:01:22,001 37 INFO odoo odoo.modules.loading: loading base/views/ir_asset_views.xml 
+2026-06-12 03:01:22,022 37 INFO odoo odoo.modules.loading: loading base/views/ir_config_parameter_views.xml 
+2026-06-12 03:01:22,043 37 INFO odoo odoo.modules.loading: loading base/views/ir_cron_views.xml 
+2026-06-12 03:01:22,077 37 INFO odoo odoo.modules.loading: loading base/views/ir_cron_trigger_views.xml 
+2026-06-12 03:01:22,099 37 INFO odoo odoo.modules.loading: loading base/views/ir_filters_views.xml 
+2026-06-12 03:01:22,128 37 INFO odoo odoo.modules.loading: loading base/views/ir_mail_server_views.xml 
+2026-06-12 03:01:22,152 37 INFO odoo odoo.modules.loading: loading base/views/ir_model_views.xml 
+2026-06-12 03:01:22,304 37 INFO odoo odoo.modules.loading: loading base/views/ir_attachment_views.xml 
+2026-06-12 03:01:22,332 37 INFO odoo odoo.modules.loading: loading base/views/ir_rule_views.xml 
+2026-06-12 03:01:22,356 37 INFO odoo odoo.modules.loading: loading base/views/ir_sequence_views.xml 
+2026-06-12 03:01:22,380 37 INFO odoo odoo.modules.loading: loading base/views/ir_ui_menu_views.xml 
+2026-06-12 03:01:22,403 37 INFO odoo odoo.modules.loading: loading base/views/ir_ui_view_views.xml 
+2026-06-12 03:01:22,456 37 INFO odoo odoo.modules.loading: loading base/views/ir_default_views.xml 
+2026-06-12 03:01:22,479 37 INFO odoo odoo.modules.loading: loading base/data/ir_config_parameter_data.xml 
+2026-06-12 03:01:22,484 37 INFO odoo odoo.modules.loading: loading base/data/ir_cron_data.xml 
+2026-06-12 03:01:22,498 37 INFO odoo odoo.modules.loading: loading base/report/ir_model_report.xml 
+2026-06-12 03:01:22,503 37 INFO odoo odoo.modules.loading: loading base/report/ir_model_templates.xml 
+2026-06-12 03:01:22,518 37 INFO odoo odoo.modules.loading: loading base/views/ir_logging_views.xml 
+2026-06-12 03:01:22,541 37 INFO odoo odoo.modules.loading: loading base/views/ir_qweb_widget_templates.xml 
+2026-06-12 03:01:22,563 37 INFO odoo odoo.modules.loading: loading base/views/ir_module_views.xml 
+2026-06-12 03:01:22,620 37 INFO odoo odoo.modules.loading: loading base/data/ir_module_category_data.xml 
+2026-06-12 03:01:22,660 37 INFO odoo odoo.modules.loading: loading base/data/ir_module_module.xml 
+2026-06-12 03:01:22,719 37 INFO odoo odoo.modules.loading: loading base/report/ir_module_reports.xml 
+2026-06-12 03:01:22,724 37 INFO odoo odoo.modules.loading: loading base/report/ir_module_report_templates.xml 
+2026-06-12 03:01:22,736 37 INFO odoo odoo.modules.loading: loading base/wizard/base_module_update_views.xml 
+2026-06-12 03:01:22,756 37 INFO odoo odoo.modules.loading: loading base/wizard/base_language_install_views.xml 
+2026-06-12 03:01:22,769 37 INFO odoo odoo.modules.loading: loading base/wizard/base_import_language_views.xml 
+2026-06-12 03:01:22,780 37 INFO odoo odoo.modules.loading: loading base/wizard/base_module_upgrade_views.xml 
+2026-06-12 03:01:22,800 37 INFO odoo odoo.modules.loading: loading base/wizard/base_module_uninstall_views.xml 
+2026-06-12 03:01:22,810 37 INFO odoo odoo.modules.loading: loading base/wizard/base_export_language_views.xml 
+2026-06-12 03:01:22,825 37 INFO odoo odoo.modules.loading: loading base/wizard/base_partner_merge_views.xml 
+2026-06-12 03:01:22,840 37 INFO odoo odoo.modules.loading: loading base/data/ir_demo_failure_data.xml 
+2026-06-12 03:01:22,859 37 INFO odoo odoo.modules.loading: loading base/views/ir_profile_views.xml 
+2026-06-12 03:01:22,884 37 INFO odoo odoo.modules.loading: loading base/views/res_company_views.xml 
+2026-06-12 03:01:22,908 37 INFO odoo odoo.modules.loading: loading base/views/res_lang_views.xml 
+2026-06-12 03:01:22,935 37 INFO odoo odoo.modules.loading: loading base/views/res_partner_views.xml 
+2026-06-12 03:01:23,030 37 INFO odoo odoo.modules.loading: loading base/views/res_bank_views.xml 
+2026-06-12 03:01:23,064 37 INFO odoo odoo.modules.loading: loading base/views/res_country_views.xml 
+2026-06-12 03:01:23,112 37 INFO odoo odoo.modules.loading: loading base/views/res_currency_views.xml 
+2026-06-12 03:01:23,155 37 INFO odoo odoo.modules.loading: loading base/views/res_groups_views.xml 
+2026-06-12 03:01:23,203 37 INFO odoo odoo.modules.loading: loading base/views/res_users_views.xml 
+2026-06-12 03:01:23,313 37 INFO odoo odoo.modules.loading: loading base/views/res_users_apikeys_views.xml 
+2026-06-12 03:01:23,321 37 INFO odoo odoo.modules.loading: loading base/views/res_device_views.xml 
+2026-06-12 03:01:23,345 37 INFO odoo odoo.modules.loading: loading base/views/res_users_identitycheck_views.xml 
+2026-06-12 03:01:23,356 37 INFO odoo odoo.modules.loading: loading base/views/res_config_settings_views.xml 
+2026-06-12 03:01:23,367 37 INFO odoo odoo.modules.loading: loading base/views/report_paperformat_views.xml 
+2026-06-12 03:01:23,393 37 INFO odoo odoo.modules.loading: loading base/security/ir.model.access.csv 
+2026-06-12 03:01:23,458 37 INFO odoo odoo.modules.loading: Module base: loading demo 
+2026-06-12 03:01:23,459 37 INFO odoo odoo.modules.loading: loading base/data/res_users_demo.xml 
+2026-06-12 03:01:24,625 37 INFO odoo odoo.modules.loading: loading base/data/res_partner_bank_demo.xml 
+2026-06-12 03:01:24,631 37 INFO odoo odoo.modules.loading: loading base/data/res_currency_demo.xml 
+2026-06-12 03:01:24,641 37 INFO odoo odoo.modules.loading: loading base/data/res_currency_rate_demo.xml 
+2026-06-12 03:01:24,932 37 INFO odoo odoo.modules.loading: loading base/data/res_bank_demo.xml 
+2026-06-12 03:01:24,938 37 INFO odoo odoo.modules.loading: loading base/data/res_partner_demo.xml 
+2026-06-12 03:01:25,123 37 INFO odoo odoo.modules.loading: loading base/data/res_partner_image_demo.xml 
+2026-06-12 03:01:25,612 37 INFO odoo odoo.modules.loading: Module base loaded in 9.86s, 9673 queries (+9673 other) 
+2026-06-12 03:01:25,613 37 INFO odoo odoo.modules.loading: 1 modules loaded in 9.86s, 9673 queries (+9673 extra) 
+2026-06-12 03:01:25,619 37 INFO odoo odoo.modules.loading: updating modules list 
+2026-06-12 03:01:25,622 37 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-06-12 03:01:27,062 37 INFO odoo odoo.modules.loading: loading 14 modules... 
+2026-06-12 03:01:27,062 37 INFO odoo odoo.modules.loading: Loading module rpc (2/14) 
+2026-06-12 03:01:27,083 37 INFO odoo odoo.modules.loading: Module rpc loaded in 0.02s, 9 queries (+9 other) 
+2026-06-12 03:01:27,084 37 INFO odoo odoo.modules.loading: Loading module web (3/14) 
+2026-06-12 03:01:27,108 37 INFO odoo odoo.registry: module web: creating or updating database tables 
+2026-06-12 03:01:27,591 37 INFO odoo odoo.modules.loading: loading web/security/ir.model.access.csv 
+2026-06-12 03:01:27,600 37 INFO odoo odoo.modules.loading: loading web/security/web_security.xml 
+2026-06-12 03:01:27,617 37 INFO odoo odoo.modules.loading: loading web/views/webclient_templates.xml 
+2026-06-12 03:01:27,724 37 INFO odoo odoo.modules.loading: loading web/views/report_templates.xml 
+2026-06-12 03:01:27,956 37 INFO odoo odoo.modules.loading: loading web/views/base_document_layout_views.xml 
+2026-06-12 03:01:28,187 49 INFO ? odoo.service.server: AutoReload watcher running with watchdog 
+2026-06-12 03:01:28,246 37 INFO odoo odoo.modules.loading: loading web/views/partner_view.xml 
+2026-06-12 03:01:28,255 37 INFO odoo odoo.modules.loading: loading web/views/speedscope_template.xml 
+2026-06-12 03:01:28,258 49 INFO odoo odoo.modules.loading: loading 1 modules... 
+2026-06-12 03:01:28,263 49 INFO odoo odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-06-12 03:01:28,263 37 INFO odoo odoo.modules.loading: loading web/views/memory_template.xml 
+2026-06-12 03:01:28,273 37 INFO odoo odoo.modules.loading: loading web/views/speedscope_config_wizard.xml 
+2026-06-12 03:01:28,284 49 INFO odoo odoo.modules.loading: updating modules list 
+2026-06-12 03:01:28,285 37 INFO odoo odoo.modules.loading: loading web/views/neutralize_views.xml 
+2026-06-12 03:01:28,286 49 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-06-12 03:01:28,296 37 INFO odoo odoo.modules.loading: loading web/views/ir_ui_view_views.xml 
+2026-06-12 03:01:28,314 37 INFO odoo odoo.modules.loading: loading web/data/ir_attachment.xml 
+2026-06-12 03:01:28,324 37 INFO odoo odoo.modules.loading: loading web/data/report_layout.xml 
+2026-06-12 03:01:28,347 37 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='company.id' in template 218. Replace by @t-out 
+2026-06-12 03:01:28,348 37 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='font' in template 218. Replace by @t-out 
+2026-06-12 03:01:28,348 37 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 03:01:28,349 37 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='secondary' in template 218. Replace by @t-out 
+2026-06-12 03:01:28,349 37 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 03:01:28,350 37 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 03:01:28,351 37 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 03:01:28,352 37 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 03:01:28,354 37 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='secondary' in template 218. Replace by @t-out 
+2026-06-12 03:01:28,354 37 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='secondary' in template 218. Replace by @t-out 
+2026-06-12 03:01:28,355 37 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 03:01:28,356 37 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='secondary' in template 218. Replace by @t-out 
+2026-06-12 03:01:28,357 37 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='secondary' in template 218. Replace by @t-out 
+2026-06-12 03:01:28,357 37 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='secondary' in template 218. Replace by @t-out 
+2026-06-12 03:01:28,359 37 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='secondary' in template 218. Replace by @t-out 
+2026-06-12 03:01:28,360 37 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='secondary' in template 218. Replace by @t-out 
+2026-06-12 03:01:28,361 37 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 03:01:28,361 37 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 03:01:28,362 37 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 03:01:28,396 37 INFO odoo odoo.modules.loading: Module web loaded in 1.31s, 1316 queries (+1316 other) 
+2026-06-12 03:01:28,397 37 INFO odoo odoo.modules.loading: Loading module api_doc (4/14) 
+2026-06-12 03:01:28,406 37 INFO odoo odoo.registry: module api_doc: creating or updating database tables 
+2026-06-12 03:01:28,425 37 INFO odoo odoo.modules.loading: loading api_doc/security/res_groups.xml 
+2026-06-12 03:01:28,449 37 INFO odoo odoo.modules.loading: loading api_doc/views/docclient.xml 
+2026-06-12 03:01:28,476 37 INFO odoo odoo.modules.loading: Module api_doc loaded in 0.08s, 65 queries (+65 other) 
+2026-06-12 03:01:28,477 37 INFO odoo odoo.modules.loading: Loading module auth_totp (5/14) 
+2026-06-12 03:01:28,500 37 INFO odoo odoo.registry: module auth_totp: creating or updating database tables 
+2026-06-12 03:01:29,893 49 ERROR odoo odoo.sql_db: bad query: b' UPDATE "ir_module_module"\n                    SET "write_date" = "__tmp"."write_date"::timestamp, "write_uid" = "__tmp"."write_uid"::int4\n                    FROM (VALUES (1, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (2, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (3, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (4, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (5, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (6, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (7, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (8, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (9, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (10, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (11, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (12, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (15, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (16, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (17, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (18, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (19, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (20, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (21, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (22, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (23, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (24, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (25, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (27, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (28, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (29, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (32, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (35, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (39, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (40, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (41, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (42, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (43, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (44, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (45, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (47, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (50, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (78, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (79, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (81, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (82, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (104, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (112, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (113, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (114, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (115, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (116, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (119, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (120, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (121, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (122, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (123, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (124, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (125, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (126, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (127, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (128, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (129, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (130, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (131, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (132, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (133, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (134, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (135, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (136, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (139, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (140, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (141, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (142, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (143, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (144, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (145, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (148, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (149, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (150, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (151, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (152, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (153, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (154, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (155, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (156, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (157, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (158, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (159, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (160, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (161, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (162, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (163, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (164, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (165, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (166, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (167, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (168, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (169, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (170, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (171, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (172, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (173, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (174, \'2026-06-12T03:01:28.252858\'::timestamp, 1), (175, \'2026-06-12T03:01:28.252858\'::timestamp, 1)) AS "__tmp"("id", "write_date", "write_uid")\n                    WHERE "ir_module_module"."id" = "__tmp"."id"\n                '
+ERROR: could not serialize access due to concurrent update
+ 
+2026-06-12 03:01:29,895 49 WARNING odoo odoo.modules.loading: Transient module states were reset 
+2026-06-12 03:01:29,899 49 ERROR odoo odoo.registry: Failed to load registry 
+2026-06-12 03:01:29,900 49 CRITICAL odoo odoo.service.server: Failed to initialize database `odoo`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1544, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module, install_modules=config['init'], upgrade_modules=config['update'], reinit_modules=config['reinit'])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/orm/registry.py", line 199, in new
+    load_modules(
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 446, in load_modules
+    env.flush_all()
+  File "/usr/lib/python3/dist-packages/odoo/orm/environments.py", line 388, in flush_all
+    self[model_name].flush_model()
+  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 6362, in flush_model
+    self._flush()
+  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 6430, in _flush
+    model.browse(some_ids)._write_multi(vals_list)
+  File "/usr/lib/python3/dist-packages/odoo/orm/models.py", line 4594, in _write_multi
+    self.env.execute_query(SQL(
+  File "/usr/lib/python3/dist-packages/odoo/orm/environments.py", line 534, in execute_query
+    self.cr.execute(query)
+  File "/usr/lib/python3/dist-packages/odoo/sql_db.py", line 440, in execute
+    self._obj.execute(query, params)
+psycopg2.errors.SerializationFailure: could not serialize access due to concurrent update
+
+2026-06-12 03:01:29,916 49 INFO odoo odoo.service.server: Initiating shutdown 
+2026-06-12 03:01:29,916 49 INFO odoo odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-06-12 03:01:29,917 49 INFO odoo odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-06-12 03:01:29,965 37 INFO odoo odoo.modules.loading: loading auth_totp/security/security.xml 
+2026-06-12 03:01:29,992 37 INFO odoo odoo.modules.loading: loading auth_totp/security/ir.model.access.csv 
+2026-06-12 03:01:29,999 37 INFO odoo odoo.modules.loading: loading auth_totp/data/ir_action_data.xml 
+2026-06-12 03:01:30,009 37 INFO odoo odoo.modules.loading: loading auth_totp/views/res_users_views.xml 
+2026-06-12 03:01:30,055 37 INFO odoo odoo.modules.loading: loading auth_totp/views/templates.xml 
+2026-06-12 03:01:30,066 37 INFO odoo odoo.modules.loading: loading auth_totp/wizard/auth_totp_wizard_views.xml 
+2026-06-12 03:01:30,076 37 ERROR odoo odoo.sql_db: bad query: b'UPDATE ir_module_module SET demo = true WHERE id = 30'
+ERROR: could not serialize access due to concurrent update
+ 
+2026-06-12 03:01:30,078 37 WARNING odoo odoo.modules.loading: Transient module states were reset 
+2026-06-12 03:01:30,079 37 ERROR odoo odoo.registry: Failed to load registry 
+2026-06-12 03:01:30,080 37 CRITICAL odoo odoo.service.server: Failed to initialize database `odoo`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1544, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module, install_modules=config['init'], upgrade_modules=config['update'], reinit_modules=config['reinit'])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/orm/registry.py", line 199, in new
+    load_modules(
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 464, in load_modules
+    load_module_graph(
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 227, in load_module_graph
+    env.cr.execute('UPDATE ir_module_module SET demo = %s WHERE id = %s', (package.demo, module_id))
+  File "/usr/lib/python3/dist-packages/odoo/sql_db.py", line 440, in execute
+    self._obj.execute(query, params)
+psycopg2.errors.SerializationFailure: could not serialize access due to concurrent update
+
+2026-06-12 03:01:30,082 37 INFO odoo odoo.service.server: Initiating shutdown 
+2026-06-12 03:01:30,083 37 INFO odoo odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-06-12 03:01:30,083 37 INFO odoo odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-06-12 03:01:43,912 71 WARNING ? odoo.tools.config: option log_db reads 'False' in the config file at /etc/odoo/odoo.conf but isn't a boolean option, skip 
+2026-06-12 03:01:43,912 71 WARNING ? odoo.tools.config: unknown option 'translate_modules' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 03:01:43,913 71 WARNING ? odoo.tools.config: unknown option 'longpolling_port' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 03:01:43,913 71 WARNING ? odoo.tools.config: option log_db reads 'False' in the config file at /etc/odoo/odoo.conf but isn't a boolean option, skip 
+2026-06-12 03:01:43,914 71 WARNING ? odoo.tools.config: unknown option 'translate_modules' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 03:01:43,914 71 WARNING ? odoo.tools.config: unknown option 'longpolling_port' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 03:01:43,914 71 WARNING ? odoo.tools.config: missing --http-interface/http_interface, using 0.0.0.0 by default, will change to 127.0.0.1 in 20.0 
+2026-06-12 03:01:43,915 71 INFO ? odoo: Odoo version 19.0-20260609 
+2026-06-12 03:01:43,916 71 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-06-12 03:01:43,916 71 INFO ? odoo: addons paths: _NamespacePath(['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/19.0', '/mnt/extra-addons', '/usr/lib/python3/dist-packages/addons']) 
+2026-06-12 03:01:43,917 71 INFO ? odoo: database: odoo@db:5432 
+2026-06-12 03:01:44,127 71 INFO ? odoo.service.server: Watching addons folder /usr/lib/python3/dist-packages/odoo/addons 
+2026-06-12 03:01:44,127 71 INFO ? odoo.service.server: Watching addons folder /var/lib/odoo/addons/19.0 
+2026-06-12 03:01:44,128 71 INFO ? odoo.service.server: Watching addons folder /mnt/extra-addons 
+2026-06-12 03:01:44,129 71 INFO ? odoo.service.server: Watching addons folder /usr/lib/python3/dist-packages/addons 
+2026-06-12 03:02:27,882 71 INFO ? odoo.service.server: AutoReload watcher running with watchdog 
+2026-06-12 03:02:27,946 71 INFO odoo odoo.modules.loading: loading 1 modules... 
+2026-06-12 03:02:27,949 71 INFO odoo odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-06-12 03:02:27,967 71 INFO odoo odoo.modules.loading: updating modules list 
+2026-06-12 03:02:27,969 71 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-06-12 03:02:29,489 71 INFO odoo odoo.modules.loading: loading 4 modules... 
+2026-06-12 03:02:29,494 71 INFO odoo odoo.modules.loading: 4 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-06-12 03:02:29,583 71 INFO odoo odoo.modules.loading: Modules loaded. 
+2026-06-12 03:02:29,590 71 INFO odoo odoo.registry: Registry changed, signaling through the database 
+2026-06-12 03:02:29,593 71 INFO odoo odoo.registry: Registry loaded in 1.702s 
+2026-06-12 03:02:29,593 71 INFO odoo odoo.service.server: Initiating shutdown 
+2026-06-12 03:02:29,594 71 INFO odoo odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-06-12 03:02:29,594 71 INFO odoo odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-06-12 03:02:39,990 1 INFO odoo odoo.service.server: Initiating shutdown 
+2026-06-12 03:02:39,991 1 INFO odoo odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-06-12 03:02:40,484 1 INFO odoo odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 2 connections  
+2026-06-12 03:02:40,484 1 INFO ? odoo.service.server: cron0 max age (0s) reached, releasing connection. 
+2026-06-12 03:02:41,495 1 WARNING ? odoo.tools.config: option log_db reads 'False' in the config file at /etc/odoo/odoo.conf but isn't a boolean option, skip 
+2026-06-12 03:02:41,496 1 WARNING ? odoo.tools.config: unknown option 'translate_modules' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 03:02:41,496 1 WARNING ? odoo.tools.config: unknown option 'longpolling_port' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 03:02:41,497 1 WARNING ? odoo.tools.config: option log_db reads 'False' in the config file at /etc/odoo/odoo.conf but isn't a boolean option, skip 
+2026-06-12 03:02:41,497 1 WARNING ? odoo.tools.config: unknown option 'translate_modules' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 03:02:41,497 1 WARNING ? odoo.tools.config: unknown option 'longpolling_port' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 03:02:41,498 1 WARNING ? odoo.tools.config: missing --http-interface/http_interface, using 0.0.0.0 by default, will change to 127.0.0.1 in 20.0 
+2026-06-12 03:02:41,498 1 INFO ? odoo: Odoo version 19.0-20260609 
+2026-06-12 03:02:41,499 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-06-12 03:02:41,500 1 INFO ? odoo: addons paths: _NamespacePath(['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/19.0', '/mnt/extra-addons', '/usr/lib/python3/dist-packages/addons']) 
+2026-06-12 03:02:41,500 1 INFO ? odoo: database: odoo@db:5432 
+2026-06-12 03:02:41,711 1 INFO ? odoo.service.server: Watching addons folder /usr/lib/python3/dist-packages/odoo/addons 
+2026-06-12 03:02:41,712 1 INFO ? odoo.service.server: Watching addons folder /var/lib/odoo/addons/19.0 
+2026-06-12 03:02:41,712 1 INFO ? odoo.service.server: Watching addons folder /mnt/extra-addons 
+2026-06-12 03:02:41,712 1 INFO ? odoo.service.server: Watching addons folder /usr/lib/python3/dist-packages/addons 
+2026-06-12 03:03:23,876 1 INFO ? odoo.service.server: AutoReload watcher running with watchdog 
+2026-06-12 03:03:23,898 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 4fa88078808c:8069 
+2026-06-12 03:03:23,947 1 INFO odoo odoo.modules.loading: loading 1 modules... 
+2026-06-12 03:03:23,950 1 INFO odoo odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-06-12 03:03:23,952 1 INFO odoo odoo.modules.loading: loading 4 modules... 
+2026-06-12 03:03:23,956 1 INFO odoo odoo.modules.loading: 4 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-06-12 03:03:23,975 1 INFO odoo odoo.modules.loading: Modules loaded. 
+2026-06-12 03:03:23,981 1 INFO odoo odoo.registry: Registry loaded in 0.062s 
+2026-06-12 03:04:12,442 1 INFO odoo odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-06-12 03:04:12,452 1 INFO odoo werkzeug: 127.0.0.1 - - [12/Jun/2026 03:04:12] "GET / HTTP/1.1" 303 - 5 0.002 0.009
+2026-06-12 03:04:24,050 1 INFO odoo odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) starting 
+2026-06-12 03:04:24,141 1 INFO odoo odoo.addons.api_doc.models.ir_attachment: GC'd 0 /doc cached index 
+2026-06-12 03:04:24,145 1 INFO odoo odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-06-12 03:04:24,155 1 INFO odoo odoo.addons.base.models.res_users: GC 'res.users.apikeys' delete 0 entries 
+2026-06-12 03:04:24,181 1 INFO odoo odoo.addons.base.models.ir_attachment: filestore gc 60 checked, 0 removed 
+2026-06-12 03:04:24,203 1 INFO odoo odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-06-12 03:04:24,209 1 INFO odoo odoo.addons.base.models.res_users: GC'd 0 user log entries 
+2026-06-12 03:04:24,233 1 INFO odoo odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) fully done (#loop 1; done 0; remaining 0; duration 0.18s) 
+2026-06-12 03:04:24,241 1 INFO odoo odoo.addons.base.models.ir_cron: Job 'Base: Portal Users Deletion' (2) starting 
+2026-06-12 03:04:24,254 1 INFO odoo odoo.addons.base.models.ir_cron: Job 'Base: Portal Users Deletion' (2) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-06-12 03:05:54,851 1 WARNING odoo odoo.http: CSRF validation failed on path '/web/login' 
+2026-06-12 03:05:54,852 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:05:54] "POST /web/login HTTP/1.1" 400 - 5 0.002 0.004
+2026-06-12 03:05:54,895 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:05:54] "GET /favicon.ico HTTP/1.1" 404 - 4 0.003 0.003
+2026-06-12 03:18:54,671 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:18:54] "GET / HTTP/1.1" 303 - 4 0.002 0.005
+2026-06-12 03:18:54,686 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:18:54] "GET /odoo HTTP/1.1" 303 - 4 0.002 0.006
+2026-06-12 03:18:54,763 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 03:18:54,764 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 03:18:54,776 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 03:18:54,777 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 03:18:54,783 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc="title or 'Odoo'" in template 185. Replace by @t-out 
+2026-06-12 03:18:54,784 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='request.csrf_token(None)' in template 185. Replace by @t-out 
+2026-06-12 03:18:54,785 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='debug' in template 185. Replace by @t-out 
+2026-06-12 03:18:55,293 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:18:55] "GET /web/login?redirect=/odoo? HTTP/1.1" 200 - 55 0.021 0.579
+2026-06-12 03:18:55,311 1 INFO ? werkzeug: 172.18.0.1 - - [12/Jun/2026 03:18:55] "GET /web/static/src/libs/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 - 0 0.000 0.004
+2026-06-12 03:18:55,340 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:18:55] "GET /web/binary/company_logo HTTP/1.1" 200 - 5 0.007 0.025
+2026-06-12 03:18:55,381 1 INFO odoo odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/97f7589/web.assets_frontend_minimal.min.js (id:199) 
+2026-06-12 03:18:55,396 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:18:55] "GET /web/assets/97f7589/web.assets_frontend_minimal.min.js HTTP/1.1" 200 - 15 0.009 0.041
+2026-06-12 03:18:55,582 1 WARNING odoo odoo.addons.base.models.assetsbundle: Error: Undefined variable: "$black".
+        on line 1472:23 of /stdin
+>> // Color contrast variables used in the color-contrast function
+
+   ----------------------^
+This error occurred while compiling the bundle 'web.assets_frontend' containing:
+    - /web/static/lib/bootstrap/scss/_functions.scss
+    - /web/static/lib/bootstrap/scss/_mixins.scss
+    - /web/static/src/scss/functions.scss
+    - /web/static/src/scss/mixins_forwardport.scss
+    - /web/static/src/scss/bs_mixins_overrides.scss
+    - /web/static/src/scss/utils.scss
+    - /web/static/src/scss/primary_variables.scss
+    - /web/static/src/core/avatar/avatar.variables.scss
+    - /web/static/src/core/bottom_sheet/bottom_sheet.variables.scss
+    - /web/static/src/core/notifications/notification.variables.scss
+    - /web/static/src/search/control_panel/control_panel.variables.scss
+    - /web/static/src/search/search_bar/search_bar.variables.scss
+    - /web/static/src/search/search_panel/search_panel.variables.scss
+    - /web/static/src/views/fields/statusbar/statusbar_field.variables.scss
+    - /web/static/src/views/fields/translation_button.variables.scss
+    - /web/static/src/views/form/form.variables.scss
+    - /web/static/src/views/kanban/kanban.variables.scss
+    - /web/static/src/webclient/burger_menu/burger_menu.variables.scss
+    - /web/static/src/webclient/navbar/navbar.variables.scss
+    - /web/static/src/scss/secondary_variables.scss
+    - /web/static/src/scss/bootstrap_overridden_frontend.scss
+    - /web/static/src/scss/pre_variables.scss
+    - /web/static/lib/bootstrap/scss/_variables.scss
+    - /web/static/lib/bootstrap/scss/_variables-dark.scss
+    - /web/static/lib/bootstrap/scss/_maps.scss
+    - /web/static/src/scss/import_bootstrap.scss
+    - /web/static/src/scss/utilities_custom.scss
+    - /web/static/lib/bootstrap/scss/utilities/_api.scss
+    - /web/static/src/scss/bootstrap_review.scss
+    - /web/static/src/scss/bootstrap_review_frontend.scss
+    - /web/static/src/webclient/navbar/navbar.scss
+    - /web/static/src/scss/animation.scss
+    - /web/static/src/scss/base_frontend.scss
+    - /web/static/src/scss/fontawesome_overridden.scss
+    - /web/static/src/scss/mimetypes.scss
+    - /web/static/src/scss/ui.scss
+    - /web/static/src/views/fields/translation_dialog.scss
+    - /web/static/src/views/fields/signature/signature_field.scss
+    - /web/static/src/core/utils/transitions.scss
+    - /web/static/src/core/action_swiper/action_swiper.scss
+    - /web/static/src/core/autocomplete/autocomplete.scss
+    - /web/static/src/core/avatar/avatar.scss
+    - /web/static/src/core/badge/badge.scss
+    - /web/static/src/core/barcode/barcode_dialog.scss
+    - /web/static/src/core/barcode/crop_overlay.scss
+    - /web/static/src/core/bottom_sheet/bottom_sheet.scss
+    - /web/static/src/core/checkbox/checkbox.scss
+    - /web/static/src/core/color_picker/color_picker.scss
+    - /web/static/src/core/color_picker/custom_color_picker/custom_color_picker.scss
+    - /web/static/src/core/colorlist/colorlist.scss
+    - /web/static/src/core/datetime/datetime_picker.scss
+    - /web/static/src/core/debug/debug_menu.scss
+    - /web/static/src/core/dialog/dialog.scss
+    - /web/static/src/core/dropdown/accordion_item.scss
+    - /web/static/src/core/dropdown/dropdown.scss
+    - /web/static/src/core/dropzone/dropzone.scss
+    - /web/static/src/core/effects/rainbow_man.scss
+    - /web/static/src/core/emoji_picker/emoji_picker.dark.scss
+    - /web/static/src/core/emoji_picker/emoji_picker.scss
+    - /web/static/src/core/errors/error_dialog.scss
+    - /web/static/src/core/file_upload/file_upload_progress_bar.scss
+    - /web/static/src/core/file_upload/file_upload_progress_record.scss
+    - /web/static/src/core/file_viewer/file_viewer.scss
+    - /web/static/src/core/ir_ui_view_code_editor/code_editor.scss
+    - /web/static/src/core/model_field_selector/model_field_selector.scss
+    - /web/static/src/core/model_field_selector/model_field_selector_popover.scss
+    - /web/static/src/core/model_selector/model_selector.scss
+    - /web/static/src/core/notebook/notebook.scss
+    - /web/static/src/core/notifications/notification.scss
+    - /web/static/src/core/overlay/overlay_container.scss
+    - /web/static/src/core/pager/pager_indicator.scss
+    - /web/static/src/core/popover/popover.scss
+    - /web/static/src/core/pwa/install_prompt.scss
+    - /web/static/src/core/record_selectors/record_selectors.scss
+    - /web/static/src/core/resizable_panel/resizable_panel.scss
+    - /web/static/src/core/select_menu/select_menu.scss
+    - /web/static/src/core/signature/name_and_signature.scss
+    - /web/static/src/core/tags_list/tags_list.scss
+    - /web/static/src/core/time_picker/time_picker.scss
+    - /web/static/src/core/tooltip/tooltip.scss
+    - /web/static/src/core/tree_editor/tree_editor.scss
+    - /web/static/src/core/ui/block_ui.scss
+    - /web/static/src/core/utils/draggable_hook_builder.scss
+    - /web/static/src/core/utils/nested_sortable.scss 
+2026-06-12 03:18:55,618 1 INFO odoo odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/b9f745c/web.assets_frontend.min.css (id:200) 
+2026-06-12 03:18:55,624 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:18:55] "GET /web/assets/b9f745c/web.assets_frontend.min.css HTTP/1.1" 200 - 21 0.009 0.309
+2026-06-12 03:18:56,081 1 INFO odoo odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/48c7d4c/web.assets_frontend_lazy.min.js (id:201) 
+2026-06-12 03:18:56,086 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:18:56] "GET /web/assets/48c7d4c/web.assets_frontend_lazy.min.js HTTP/1.1" 200 - 21 0.006 0.419
+2026-06-12 03:18:56,212 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:18:56] "GET /web/webclient/translations?hash=&lang= HTTP/1.1" 200 - 5 0.002 0.003
+2026-06-12 03:19:04,720 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:04] "GET / HTTP/1.1" 303 - 4 0.003 0.006
+2026-06-12 03:19:04,748 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:04] "GET /odoo HTTP/1.1" 303 - 4 0.003 0.006
+2026-06-12 03:19:04,782 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 03:19:04,784 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 03:19:04,796 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 03:19:04,797 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 03:19:04,803 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc="title or 'Odoo'" in template 185. Replace by @t-out 
+2026-06-12 03:19:04,805 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='request.csrf_token(None)' in template 185. Replace by @t-out 
+2026-06-12 03:19:04,806 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='debug' in template 185. Replace by @t-out 
+2026-06-12 03:19:04,958 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:04] "GET /web/login?redirect=/odoo? HTTP/1.1" 200 - 45 0.015 0.190
+2026-06-12 03:19:04,971 1 INFO ? werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:04] "GET /web/static/src/libs/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 - 0 0.000 0.004
+2026-06-12 03:19:04,980 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:04] "GET /web/binary/company_logo HTTP/1.1" 200 - 5 0.004 0.007
+2026-06-12 03:19:04,982 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:04] "GET /web/assets/b9f745c/web.assets_frontend.min.css HTTP/1.1" 200 - 7 0.006 0.009
+2026-06-12 03:19:04,994 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:04] "GET /web/assets/97f7589/web.assets_frontend_minimal.min.js HTTP/1.1" 200 - 7 0.002 0.004
+2026-06-12 03:19:05,030 1 INFO ? werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:05] "GET /web/static/img/favicon.ico HTTP/1.1" 200 - 0 0.000 0.002
+2026-06-12 03:19:05,036 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:05] "GET /web/assets/48c7d4c/web.assets_frontend_lazy.min.js HTTP/1.1" 200 - 7 0.004 0.006
+2026-06-12 03:19:05,155 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:05] "GET /web/webclient/translations?hash=&lang= HTTP/1.1" 200 - 5 0.002 0.003
+2026-06-12 03:19:24,199 1 INFO odoo odoo.addons.base.models.res_users: Login failed for login:valegchemes@gmail.com from 172.18.0.1 
+2026-06-12 03:19:24,225 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 03:19:24,226 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 03:19:24,235 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 03:19:24,237 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 03:19:24,243 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc="title or 'Odoo'" in template 185. Replace by @t-out 
+2026-06-12 03:19:24,244 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='request.csrf_token(None)' in template 185. Replace by @t-out 
+2026-06-12 03:19:24,245 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='debug' in template 185. Replace by @t-out 
+2026-06-12 03:19:24,382 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:24] "POST /web/login HTTP/1.1" 200 - 48 0.016 0.174
+2026-06-12 03:19:24,395 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:24] "GET /web/binary/company_logo HTTP/1.1" 304 - 5 0.003 0.004
+2026-06-12 03:19:24,438 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:24] "GET /web/webclient/translations?hash=e253a6ad94d19461c7e9b6154d187b9f9ff65191&lang= HTTP/1.1" 200 - 5 0.001 0.003
+2026-06-12 03:19:43,144 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:43] "GET /web/database/manager HTTP/1.1" 200 - 6 0.003 0.040
+2026-06-12 03:19:43,153 1 INFO ? werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:43] "GET /web/static/src/libs/fontawesome/css/font-awesome.css HTTP/1.1" 200 - 0 0.000 0.002
+2026-06-12 03:19:43,159 1 INFO ? werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:43] "GET /web/static/lib/bootstrap/dist/css/bootstrap.css HTTP/1.1" 200 - 0 0.000 0.005
+2026-06-12 03:19:43,165 1 INFO ? werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:43] "GET /web/static/lib/bootstrap/js/dist/dom/data.js HTTP/1.1" 200 - 0 0.000 0.005
+2026-06-12 03:19:43,166 1 INFO ? werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:43] "GET /web/static/lib/bootstrap/js/dist/util/index.js HTTP/1.1" 200 - 0 0.000 0.009
+2026-06-12 03:19:43,166 1 INFO ? werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:43] "GET /web/static/lib/bootstrap/js/dist/dom/event-handler.js HTTP/1.1" 200 - 0 0.000 0.005
+2026-06-12 03:19:43,170 1 INFO ? werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:43] "GET /web/static/lib/bootstrap/js/dist/dom/manipulator.js HTTP/1.1" 200 - 0 0.000 0.005
+2026-06-12 03:19:43,171 1 INFO ? werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:43] "GET /web/static/lib/bootstrap/js/dist/dom/selector-engine.js HTTP/1.1" 200 - 0 0.000 0.004
+2026-06-12 03:19:43,178 1 INFO ? werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:43] "GET /web/static/lib/bootstrap/js/dist/util/config.js HTTP/1.1" 200 - 0 0.000 0.007
+2026-06-12 03:19:43,180 1 INFO ? werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:43] "GET /web/static/lib/bootstrap/js/dist/util/backdrop.js HTTP/1.1" 200 - 0 0.000 0.003
+2026-06-12 03:19:43,180 1 INFO ? werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:43] "GET /web/static/lib/bootstrap/js/dist/util/component-functions.js HTTP/1.1" 200 - 0 0.000 0.005
+2026-06-12 03:19:43,182 1 INFO ? werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:43] "GET /web/static/lib/bootstrap/js/dist/util/focustrap.js HTTP/1.1" 200 - 0 0.000 0.004
+2026-06-12 03:19:43,189 1 INFO ? werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:43] "GET /web/static/lib/bootstrap/js/dist/util/scrollbar.js HTTP/1.1" 200 - 0 0.000 0.006
+2026-06-12 03:19:43,192 1 INFO ? werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:43] "GET /web/static/lib/bootstrap/js/dist/base-component.js HTTP/1.1" 200 - 0 0.000 0.006
+2026-06-12 03:19:43,220 1 INFO ? werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:43] "GET /web/static/src/public/database_manager.js HTTP/1.1" 200 - 0 0.000 0.003
+2026-06-12 03:19:43,220 1 INFO ? werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:43] "GET /web/static/lib/bootstrap/js/dist/modal.js HTTP/1.1" 200 - 0 0.000 0.004
+2026-06-12 03:19:43,221 1 INFO ? werkzeug: 172.18.0.1 - - [12/Jun/2026 03:19:43] "GET /web/static/img/logo2.png HTTP/1.1" 200 - 0 0.000 0.003
+2026-06-12 03:21:03,042 1 INFO None odoo.service.db: Create database `inmobiliaria_dev`. 
+2026-06-12 03:21:03,342 1 INFO None odoo.modules.loading: Initializing database inmobiliaria_dev 
+2026-06-12 03:21:05,355 1 INFO None odoo.modules.loading: loading 1 modules... 
+2026-06-12 03:21:05,356 1 INFO None odoo.modules.loading: Loading module base (1/1) 
+2026-06-12 03:21:05,376 1 INFO None odoo.registry: module base: creating or updating database tables 
+2026-06-12 03:21:06,096 1 INFO None odoo.models: Prepare computation of ir.module.module.menus_by_module 
+2026-06-12 03:21:06,097 1 INFO None odoo.models: Prepare computation of ir.module.module.reports_by_module 
+2026-06-12 03:21:06,098 1 INFO None odoo.models: Prepare computation of ir.module.module.views_by_module 
+2026-06-12 03:21:06,372 1 INFO None odoo.models: Prepare computation of res.partner.user_id 
+2026-06-12 03:21:06,373 1 INFO None odoo.models: Prepare computation of res.partner.commercial_partner_id 
+2026-06-12 03:21:06,373 1 INFO None odoo.models: Prepare computation of res.partner.complete_name 
+2026-06-12 03:21:06,374 1 INFO None odoo.models: Prepare computation of res.partner.lang 
+2026-06-12 03:21:06,374 1 INFO None odoo.models: Prepare computation of res.partner.company_registry 
+2026-06-12 03:21:06,374 1 INFO None odoo.models: Prepare computation of res.partner.commercial_company_name 
+2026-06-12 03:21:06,375 1 INFO None odoo.models: Prepare computation of res.partner.properties 
+2026-06-12 03:21:06,375 1 INFO None odoo.models: Prepare computation of res.partner.partner_share 
+2026-06-12 03:21:06,448 1 INFO None odoo.models: Prepare computation of res.currency.decimal_places 
+2026-06-12 03:21:06,504 1 INFO None odoo.models: Prepare computation of res.company.uses_default_logo 
+2026-06-12 03:21:06,505 1 INFO None odoo.models: Prepare computation of res.company.logo_web 
+2026-06-12 03:21:06,513 1 INFO None odoo.models: Computing parent_path for table res_company... 
+2026-06-12 03:21:06,597 1 INFO None odoo.models: Prepare computation of res.users.signature 
+2026-06-12 03:21:06,598 1 INFO None odoo.models: Prepare computation of res.users.share 
+2026-06-12 03:21:08,286 1 INFO None odoo.modules.loading: loading base/data/res_bank.xml 
+2026-06-12 03:21:08,294 1 INFO None odoo.modules.loading: loading base/data/res.lang.csv 
+2026-06-12 03:21:08,320 1 INFO None odoo.modules.loading: loading base/data/res_lang_data.xml 
+2026-06-12 03:21:08,352 1 INFO None odoo.modules.loading: loading base/data/res_partner_data.xml 
+2026-06-12 03:21:08,391 1 INFO None odoo.modules.loading: loading base/data/res_currency_data.xml 
+2026-06-12 03:21:08,780 1 INFO None odoo.modules.loading: loading base/data/res_company_data.xml 
+2026-06-12 03:21:08,789 1 INFO None odoo.modules.loading: loading base/data/res_users_data.xml 
+2026-06-12 03:21:09,459 1 INFO None odoo.modules.loading: loading base/data/report_paperformat_data.xml 
+2026-06-12 03:21:09,467 1 INFO None odoo.modules.loading: loading base/data/res_country_data.xml 
+2026-06-12 03:21:09,867 1 INFO None odoo.modules.loading: loading base/data/ir_demo_data.xml 
+2026-06-12 03:21:09,879 1 INFO None odoo.modules.loading: loading base/security/base_groups.xml 
+2026-06-12 03:21:10,010 1 INFO None odoo.modules.loading: loading base/security/base_security.xml 
+2026-06-12 03:21:10,135 1 INFO None odoo.modules.loading: loading base/wizard/wizard_ir_model_menu_create_views.xml 
+2026-06-12 03:21:10,145 1 INFO None odoo.modules.loading: loading base/views/base_menus.xml 
+2026-06-12 03:21:10,195 1 INFO None odoo.modules.loading: loading base/views/decimal_precision_views.xml 
+2026-06-12 03:21:10,214 1 INFO None odoo.modules.loading: loading base/views/res_config_views.xml 
+2026-06-12 03:21:10,222 1 INFO None odoo.modules.loading: loading base/data/res.country.state.csv 
+2026-06-12 03:21:10,899 1 INFO None odoo.modules.loading: loading base/views/ir_actions_views.xml 
+2026-06-12 03:21:11,027 1 INFO None odoo.modules.loading: loading base/views/ir_asset_views.xml 
+2026-06-12 03:21:11,044 1 INFO None odoo.modules.loading: loading base/views/ir_config_parameter_views.xml 
+2026-06-12 03:21:11,062 1 INFO None odoo.modules.loading: loading base/views/ir_cron_views.xml 
+2026-06-12 03:21:11,089 1 INFO None odoo.modules.loading: loading base/views/ir_cron_trigger_views.xml 
+2026-06-12 03:21:11,108 1 INFO None odoo.modules.loading: loading base/views/ir_filters_views.xml 
+2026-06-12 03:21:11,133 1 INFO None odoo.modules.loading: loading base/views/ir_mail_server_views.xml 
+2026-06-12 03:21:11,155 1 INFO None odoo.modules.loading: loading base/views/ir_model_views.xml 
+2026-06-12 03:21:11,281 1 INFO None odoo.modules.loading: loading base/views/ir_attachment_views.xml 
+2026-06-12 03:21:11,302 1 INFO None odoo.modules.loading: loading base/views/ir_rule_views.xml 
+2026-06-12 03:21:11,320 1 INFO None odoo.modules.loading: loading base/views/ir_sequence_views.xml 
+2026-06-12 03:21:11,341 1 INFO None odoo.modules.loading: loading base/views/ir_ui_menu_views.xml 
+2026-06-12 03:21:11,359 1 INFO None odoo.modules.loading: loading base/views/ir_ui_view_views.xml 
+2026-06-12 03:21:11,404 1 INFO None odoo.modules.loading: loading base/views/ir_default_views.xml 
+2026-06-12 03:21:11,424 1 INFO None odoo.modules.loading: loading base/data/ir_config_parameter_data.xml 
+2026-06-12 03:21:11,428 1 INFO None odoo.modules.loading: loading base/data/ir_cron_data.xml 
+2026-06-12 03:21:11,440 1 INFO None odoo.modules.loading: loading base/report/ir_model_report.xml 
+2026-06-12 03:21:11,444 1 INFO None odoo.modules.loading: loading base/report/ir_model_templates.xml 
+2026-06-12 03:21:11,457 1 INFO None odoo.modules.loading: loading base/views/ir_logging_views.xml 
+2026-06-12 03:21:11,478 1 INFO None odoo.modules.loading: loading base/views/ir_qweb_widget_templates.xml 
+2026-06-12 03:21:11,496 1 INFO None odoo.modules.loading: loading base/views/ir_module_views.xml 
+2026-06-12 03:21:11,544 1 INFO None odoo.modules.loading: loading base/data/ir_module_category_data.xml 
+2026-06-12 03:21:11,575 1 INFO None odoo.modules.loading: loading base/data/ir_module_module.xml 
+2026-06-12 03:21:11,626 1 INFO None odoo.modules.loading: loading base/report/ir_module_reports.xml 
+2026-06-12 03:21:11,631 1 INFO None odoo.modules.loading: loading base/report/ir_module_report_templates.xml 
+2026-06-12 03:21:11,642 1 INFO None odoo.modules.loading: loading base/wizard/base_module_update_views.xml 
+2026-06-12 03:21:11,657 1 INFO None odoo.modules.loading: loading base/wizard/base_language_install_views.xml 
+2026-06-12 03:21:11,668 1 INFO None odoo.modules.loading: loading base/wizard/base_import_language_views.xml 
+2026-06-12 03:21:11,679 1 INFO None odoo.modules.loading: loading base/wizard/base_module_upgrade_views.xml 
+2026-06-12 03:21:11,694 1 INFO None odoo.modules.loading: loading base/wizard/base_module_uninstall_views.xml 
+2026-06-12 03:21:11,702 1 INFO None odoo.modules.loading: loading base/wizard/base_export_language_views.xml 
+2026-06-12 03:21:11,715 1 INFO None odoo.modules.loading: loading base/wizard/base_partner_merge_views.xml 
+2026-06-12 03:21:11,728 1 INFO None odoo.modules.loading: loading base/data/ir_demo_failure_data.xml 
+2026-06-12 03:21:11,743 1 INFO None odoo.modules.loading: loading base/views/ir_profile_views.xml 
+2026-06-12 03:21:11,763 1 INFO None odoo.modules.loading: loading base/views/res_company_views.xml 
+2026-06-12 03:21:11,782 1 INFO None odoo.modules.loading: loading base/views/res_lang_views.xml 
+2026-06-12 03:21:11,800 1 INFO None odoo.modules.loading: loading base/views/res_partner_views.xml 
+2026-06-12 03:21:11,875 1 INFO None odoo.modules.loading: loading base/views/res_bank_views.xml 
+2026-06-12 03:21:11,905 1 INFO None odoo.modules.loading: loading base/views/res_country_views.xml 
+2026-06-12 03:21:11,942 1 INFO None odoo.modules.loading: loading base/views/res_currency_views.xml 
+2026-06-12 03:21:11,975 1 INFO None odoo.modules.loading: loading base/views/res_groups_views.xml 
+2026-06-12 03:21:12,015 1 INFO None odoo.modules.loading: loading base/views/res_users_views.xml 
+2026-06-12 03:21:12,099 1 INFO None odoo.modules.loading: loading base/views/res_users_apikeys_views.xml 
+2026-06-12 03:21:12,105 1 INFO None odoo.modules.loading: loading base/views/res_device_views.xml 
+2026-06-12 03:21:12,125 1 INFO None odoo.modules.loading: loading base/views/res_users_identitycheck_views.xml 
+2026-06-12 03:21:12,133 1 INFO None odoo.modules.loading: loading base/views/res_config_settings_views.xml 
+2026-06-12 03:21:12,141 1 INFO None odoo.modules.loading: loading base/views/report_paperformat_views.xml 
+2026-06-12 03:21:12,163 1 INFO None odoo.modules.loading: loading base/security/ir.model.access.csv 
+2026-06-12 03:21:12,218 1 INFO None odoo.addons.base.models.ir_module: module base: loading translation file /usr/lib/python3/dist-packages/odoo/addons/base/i18n/es.po for language es_MX 
+2026-06-12 03:21:12,463 1 INFO None odoo.addons.base.models.ir_module: module base: loading translation file /usr/lib/python3/dist-packages/odoo/addons/base/i18n/es_419.po for language es_MX 
+2026-06-12 03:21:13,074 1 INFO None odoo.modules.loading: Module base loaded in 7.72s, 8628 queries (+8628 other) 
+2026-06-12 03:21:13,075 1 INFO None odoo.modules.loading: 1 modules loaded in 7.72s, 8628 queries (+8628 extra) 
+2026-06-12 03:21:13,078 1 INFO None odoo.modules.loading: updating modules list 
+2026-06-12 03:21:13,079 1 INFO None odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-06-12 03:21:14,286 1 INFO None odoo.modules.loading: loading 14 modules... 
+2026-06-12 03:21:14,287 1 INFO None odoo.modules.loading: Loading module rpc (2/14) 
+2026-06-12 03:21:14,298 1 INFO None odoo.addons.base.models.ir_module: module rpc: no translation for language es_MX 
+2026-06-12 03:21:14,304 1 INFO None odoo.modules.loading: Module rpc loaded in 0.02s, 9 queries (+9 other) 
+2026-06-12 03:21:14,305 1 INFO None odoo.modules.loading: Loading module web (3/14) 
+2026-06-12 03:21:14,327 1 INFO None odoo.registry: module web: creating or updating database tables 
+2026-06-12 03:21:14,725 1 INFO None odoo.modules.loading: loading web/security/ir.model.access.csv 
+2026-06-12 03:21:14,733 1 INFO None odoo.modules.loading: loading web/security/web_security.xml 
+2026-06-12 03:21:14,743 1 INFO None odoo.modules.loading: loading web/views/webclient_templates.xml 
+2026-06-12 03:21:14,812 1 INFO None odoo.modules.loading: loading web/views/report_templates.xml 
+2026-06-12 03:21:14,949 1 INFO None odoo.modules.loading: loading web/views/base_document_layout_views.xml 
+2026-06-12 03:21:14,964 1 INFO None odoo.modules.loading: loading web/views/partner_view.xml 
+2026-06-12 03:21:14,971 1 INFO None odoo.modules.loading: loading web/views/speedscope_template.xml 
+2026-06-12 03:21:14,977 1 INFO None odoo.modules.loading: loading web/views/memory_template.xml 
+2026-06-12 03:21:14,986 1 INFO None odoo.modules.loading: loading web/views/speedscope_config_wizard.xml 
+2026-06-12 03:21:14,998 1 INFO None odoo.modules.loading: loading web/views/neutralize_views.xml 
+2026-06-12 03:21:15,007 1 INFO None odoo.modules.loading: loading web/views/ir_ui_view_views.xml 
+2026-06-12 03:21:15,019 1 INFO None odoo.modules.loading: loading web/data/ir_attachment.xml 
+2026-06-12 03:21:15,024 1 INFO None odoo.modules.loading: loading web/data/report_layout.xml 
+2026-06-12 03:21:15,037 1 WARNING None odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='company.id' in template 218. Replace by @t-out 
+2026-06-12 03:21:15,038 1 WARNING None odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='font' in template 218. Replace by @t-out 
+2026-06-12 03:21:15,039 1 WARNING None odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 03:21:15,039 1 WARNING None odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='secondary' in template 218. Replace by @t-out 
+2026-06-12 03:21:15,040 1 WARNING None odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 03:21:15,040 1 WARNING None odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 03:21:15,041 1 WARNING None odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 03:21:15,042 1 WARNING None odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 03:21:15,042 1 WARNING None odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='secondary' in template 218. Replace by @t-out 
+2026-06-12 03:21:15,043 1 WARNING None odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='secondary' in template 218. Replace by @t-out 
+2026-06-12 03:21:15,044 1 WARNING None odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 03:21:15,045 1 WARNING None odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='secondary' in template 218. Replace by @t-out 
+2026-06-12 03:21:15,046 1 WARNING None odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='secondary' in template 218. Replace by @t-out 
+2026-06-12 03:21:15,046 1 WARNING None odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='secondary' in template 218. Replace by @t-out 
+2026-06-12 03:21:15,047 1 WARNING None odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='secondary' in template 218. Replace by @t-out 
+2026-06-12 03:21:15,047 1 WARNING None odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='secondary' in template 218. Replace by @t-out 
+2026-06-12 03:21:15,048 1 WARNING None odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 03:21:15,048 1 WARNING None odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 03:21:15,049 1 WARNING None odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='primary' in template 218. Replace by @t-out 
+2026-06-12 03:21:15,059 1 INFO None odoo.addons.base.models.ir_module: module web: loading translation file /usr/lib/python3/dist-packages/odoo/addons/web/i18n/es.po for language es_MX 
+2026-06-12 03:21:15,156 1 INFO None odoo.addons.base.models.ir_module: module web: loading translation file /usr/lib/python3/dist-packages/odoo/addons/web/i18n/es_419.po for language es_MX 
+2026-06-12 03:21:15,289 1 INFO None odoo.modules.loading: Module web loaded in 0.98s, 1328 queries (+1328 other) 
+2026-06-12 03:21:15,290 1 INFO None odoo.modules.loading: Loading module api_doc (4/14) 
+2026-06-12 03:21:15,294 1 INFO None odoo.registry: module api_doc: creating or updating database tables 
+2026-06-12 03:21:15,308 1 INFO None odoo.modules.loading: loading api_doc/security/res_groups.xml 
+2026-06-12 03:21:15,325 1 INFO None odoo.modules.loading: loading api_doc/views/docclient.xml 
+2026-06-12 03:21:15,335 1 INFO None odoo.addons.base.models.ir_module: module api_doc: no translation for language es_MX 
+2026-06-12 03:21:15,345 1 INFO None odoo.modules.loading: Module api_doc loaded in 0.06s, 65 queries (+65 other) 
+2026-06-12 03:21:15,346 1 INFO None odoo.modules.loading: Loading module auth_totp (5/14) 
+2026-06-12 03:21:15,371 1 INFO None odoo.registry: module auth_totp: creating or updating database tables 
+2026-06-12 03:21:15,482 1 INFO None odoo.modules.loading: loading auth_totp/security/security.xml 
+2026-06-12 03:21:15,501 1 INFO None odoo.modules.loading: loading auth_totp/security/ir.model.access.csv 
+2026-06-12 03:21:15,508 1 INFO None odoo.modules.loading: loading auth_totp/data/ir_action_data.xml 
+2026-06-12 03:21:15,515 1 INFO None odoo.modules.loading: loading auth_totp/views/res_users_views.xml 
+2026-06-12 03:21:15,550 1 INFO None odoo.modules.loading: loading auth_totp/views/templates.xml 
+2026-06-12 03:21:15,560 1 INFO None odoo.modules.loading: loading auth_totp/wizard/auth_totp_wizard_views.xml 
+2026-06-12 03:21:15,571 1 INFO None odoo.addons.base.models.ir_module: module auth_totp: loading translation file /usr/lib/python3/dist-packages/odoo/addons/auth_totp/i18n/es.po for language es_MX 
+2026-06-12 03:21:15,575 1 INFO None odoo.addons.base.models.ir_module: module auth_totp: loading translation file /usr/lib/python3/dist-packages/odoo/addons/auth_totp/i18n/es_419.po for language es_MX 
+2026-06-12 03:21:15,603 1 INFO None odoo.modules.loading: Module auth_totp loaded in 0.26s, 239 queries (+239 other) 
+2026-06-12 03:21:15,604 1 INFO None odoo.modules.loading: Loading module base_import (6/14) 
+2026-06-12 03:21:15,632 1 INFO None odoo.registry: module base_import: creating or updating database tables 
+2026-06-12 03:21:16,026 1 INFO None odoo.modules.loading: loading base_import/security/ir.model.access.csv 
+2026-06-12 03:21:16,035 1 INFO None odoo.addons.base.models.ir_module: module base_import: loading translation file /usr/lib/python3/dist-packages/odoo/addons/base_import/i18n/es.po for language es_MX 
+2026-06-12 03:21:16,042 1 INFO None odoo.addons.base.models.ir_module: module base_import: loading translation file /usr/lib/python3/dist-packages/odoo/addons/base_import/i18n/es_419.po for language es_MX 
+2026-06-12 03:21:16,058 1 INFO None odoo.modules.loading: Module base_import loaded in 0.45s, 960 queries (+960 other) 
+2026-06-12 03:21:16,059 1 INFO None odoo.modules.loading: Loading module base_import_module (7/14) 
+2026-06-12 03:21:16,070 1 INFO None odoo.registry: module base_import_module: creating or updating database tables 
+2026-06-12 03:21:16,131 1 INFO None odoo.modules.loading: loading base_import_module/security/ir.model.access.csv 
+2026-06-12 03:21:16,137 1 INFO None odoo.modules.loading: loading base_import_module/views/base_import_module_view.xml 
+2026-06-12 03:21:16,152 1 INFO None odoo.modules.loading: loading base_import_module/views/ir_module_views.xml 
+2026-06-12 03:21:16,195 1 INFO None odoo.addons.base.models.ir_module: module base_import_module: loading translation file /usr/lib/python3/dist-packages/odoo/addons/base_import_module/i18n/es.po for language es_MX 
+2026-06-12 03:21:16,200 1 INFO None odoo.addons.base.models.ir_module: module base_import_module: loading translation file /usr/lib/python3/dist-packages/odoo/addons/base_import_module/i18n/es_419.po for language es_MX 
+2026-06-12 03:21:16,225 1 INFO None odoo.modules.loading: Module base_import_module loaded in 0.17s, 196 queries (+196 other) 
+2026-06-12 03:21:16,226 1 INFO None odoo.modules.loading: Loading module base_setup (8/14) 
+2026-06-12 03:21:16,237 1 INFO None odoo.registry: module base_setup: creating or updating database tables 
+2026-06-12 03:21:16,280 1 INFO None odoo.modules.loading: loading base_setup/data/base_setup_data.xml 
+2026-06-12 03:21:16,286 1 INFO None odoo.modules.loading: loading base_setup/views/res_config_settings_views.xml 
+2026-06-12 03:21:16,313 1 INFO None odoo.modules.loading: loading base_setup/views/res_partner_views.xml 
+2026-06-12 03:21:16,327 1 INFO None odoo.addons.base.models.ir_module: module base_setup: loading translation file /usr/lib/python3/dist-packages/odoo/addons/base_setup/i18n/es.po for language es_MX 
+2026-06-12 03:21:16,333 1 INFO None odoo.addons.base.models.ir_module: module base_setup: loading translation file /usr/lib/python3/dist-packages/odoo/addons/base_setup/i18n/es_419.po for language es_MX 
+2026-06-12 03:21:16,353 1 INFO None odoo.modules.loading: Module base_setup loaded in 0.13s, 168 queries (+168 other) 
+2026-06-12 03:21:16,354 1 INFO None odoo.modules.loading: Loading module bus (9/14) 
+2026-06-12 03:21:16,376 1 INFO None odoo.registry: module bus: creating or updating database tables 
+2026-06-12 03:21:16,467 1 INFO None odoo.modules.loading: loading bus/security/ir.model.access.csv 
+2026-06-12 03:21:16,475 1 INFO None odoo.addons.base.models.ir_module: module bus: loading translation file /usr/lib/python3/dist-packages/odoo/addons/bus/i18n/es.po for language es_MX 
+2026-06-12 03:21:16,478 1 INFO None odoo.addons.base.models.ir_module: module bus: loading translation file /usr/lib/python3/dist-packages/odoo/addons/bus/i18n/es_419.po for language es_MX 
+2026-06-12 03:21:16,495 1 INFO None odoo.modules.loading: Module bus loaded in 0.14s, 158 queries (+158 other) 
+2026-06-12 03:21:16,496 1 INFO None odoo.modules.loading: Loading module web_tour (10/14) 
+2026-06-12 03:21:16,507 1 INFO None odoo.registry: module web_tour: creating or updating database tables 
+2026-06-12 03:21:16,515 1 INFO None odoo.models: Prepare computation of res.users.tour_enabled 
+2026-06-12 03:21:16,634 1 INFO None odoo.modules.loading: loading web_tour/security/ir.model.access.csv 
+2026-06-12 03:21:16,640 1 INFO None odoo.modules.loading: loading web_tour/views/tour_views.xml 
+2026-06-12 03:21:16,666 1 INFO None odoo.addons.base.models.ir_module: module web_tour: loading translation file /usr/lib/python3/dist-packages/odoo/addons/web_tour/i18n/es.po for language es_MX 
+2026-06-12 03:21:16,669 1 INFO None odoo.addons.base.models.ir_module: module web_tour: loading translation file /usr/lib/python3/dist-packages/odoo/addons/web_tour/i18n/es_419.po for language es_MX 
+2026-06-12 03:21:16,691 1 INFO None odoo.modules.loading: Module web_tour loaded in 0.19s, 195 queries (+195 other) 
+2026-06-12 03:21:16,692 1 INFO None odoo.modules.loading: Loading module auth_passkey (11/14) 
+2026-06-12 03:21:16,762 1 INFO None odoo.registry: module auth_passkey: creating or updating database tables 
+2026-06-12 03:21:16,842 1 INFO None odoo.modules.loading: loading auth_passkey/views/auth_passkey_key_views.xml 
+2026-06-12 03:21:16,861 1 INFO None odoo.modules.loading: loading auth_passkey/views/auth_passkey_login_templates.xml 
+2026-06-12 03:21:16,881 1 INFO None odoo.modules.loading: loading auth_passkey/views/res_users_identitycheck_views.xml 
+2026-06-12 03:21:16,892 1 INFO None odoo.modules.loading: loading auth_passkey/views/res_users_views.xml 
+2026-06-12 03:21:16,919 1 INFO None odoo.modules.loading: loading auth_passkey/security/ir.model.access.csv 
+2026-06-12 03:21:16,926 1 INFO None odoo.modules.loading: loading auth_passkey/security/security.xml 
+2026-06-12 03:21:16,945 1 INFO None odoo.addons.base.models.ir_module: module auth_passkey: loading translation file /usr/lib/python3/dist-packages/odoo/addons/auth_passkey/i18n/es.po for language es_MX 
+2026-06-12 03:21:16,952 1 INFO None odoo.addons.base.models.ir_module: module auth_passkey: loading translation file /usr/lib/python3/dist-packages/odoo/addons/auth_passkey/i18n/es_419.po for language es_MX 
+2026-06-12 03:21:16,998 1 INFO None odoo.modules.loading: Module auth_passkey loaded in 0.31s, 247 queries (+247 other) 
+2026-06-12 03:21:16,998 1 INFO None odoo.modules.loading: Loading module html_editor (12/14) 
+2026-06-12 03:21:17,219 1 INFO None odoo.registry: module html_editor: creating or updating database tables 
+2026-06-12 03:21:17,630 1 INFO None odoo.modules.loading: loading html_editor/security/ir.model.access.csv 
+2026-06-12 03:21:17,638 1 INFO None odoo.addons.base.models.ir_module: module html_editor: loading translation file /usr/lib/python3/dist-packages/odoo/addons/html_editor/i18n/es.po for language es_MX 
+2026-06-12 03:21:17,649 1 INFO None odoo.addons.base.models.ir_module: module html_editor: loading translation file /usr/lib/python3/dist-packages/odoo/addons/html_editor/i18n/es_419.po for language es_MX 
+2026-06-12 03:21:17,672 1 INFO None odoo.modules.loading: Module html_editor loaded in 0.67s, 1038 queries (+1038 other) 
+2026-06-12 03:21:17,672 1 INFO None odoo.modules.loading: Loading module iap (13/14) 
+2026-06-12 03:21:17,675 1 INFO None odoo.registry: module iap: creating or updating database tables 
+2026-06-12 03:21:17,771 1 INFO None odoo.modules.loading: loading iap/data/services.xml 
+2026-06-12 03:21:17,776 1 INFO None odoo.modules.loading: loading iap/security/ir.model.access.csv 
+2026-06-12 03:21:17,783 1 INFO None odoo.modules.loading: loading iap/security/ir_rule.xml 
+2026-06-12 03:21:17,790 1 INFO None odoo.modules.loading: loading iap/views/iap_views.xml 
+2026-06-12 03:21:17,809 1 INFO None odoo.modules.loading: loading iap/views/res_config_settings.xml 
+2026-06-12 03:21:17,832 1 INFO None odoo.addons.base.models.ir_module: module iap: loading translation file /usr/lib/python3/dist-packages/odoo/addons/iap/i18n/es.po for language es_MX 
+2026-06-12 03:21:17,835 1 INFO None odoo.addons.base.models.ir_module: module iap: loading translation file /usr/lib/python3/dist-packages/odoo/addons/iap/i18n/es_419.po for language es_MX 
+2026-06-12 03:21:17,853 1 INFO None odoo.modules.loading: Module iap loaded in 0.18s, 208 queries (+208 other) 
+2026-06-12 03:21:17,853 1 INFO None odoo.modules.loading: Loading module web_unsplash (14/14) 
+2026-06-12 03:21:17,864 1 INFO None odoo.registry: module web_unsplash: creating or updating database tables 
+2026-06-12 03:21:17,889 1 INFO None odoo.modules.loading: loading web_unsplash/views/res_config_settings_view.xml 
+2026-06-12 03:21:17,916 1 INFO None odoo.addons.base.models.ir_module: module web_unsplash: loading translation file /usr/lib/python3/dist-packages/odoo/addons/web_unsplash/i18n/es.po for language es_MX 
+2026-06-12 03:21:17,920 1 INFO None odoo.addons.base.models.ir_module: module web_unsplash: loading translation file /usr/lib/python3/dist-packages/odoo/addons/web_unsplash/i18n/es_419.po for language es_MX 
+2026-06-12 03:21:17,931 1 INFO None odoo.modules.loading: Module web_unsplash loaded in 0.08s, 109 queries (+109 other) 
+2026-06-12 03:21:17,932 1 INFO None odoo.modules.loading: 14 modules loaded in 3.64s, 4920 queries (+4920 extra) 
+2026-06-12 03:21:18,103 1 INFO None odoo.modules.loading: Modules loaded. 
+2026-06-12 03:21:18,110 1 INFO None odoo.registry: Registry changed, signaling through the database 
+2026-06-12 03:21:18,113 1 INFO None odoo.registry: Registry loaded in 14.833s 
+2026-06-12 03:21:18,116 1 INFO None odoo.addons.base.models.ir_module: module base: loading translation file /usr/lib/python3/dist-packages/odoo/addons/base/i18n/es.po for language es_MX 
+2026-06-12 03:21:18,393 1 INFO None odoo.addons.base.models.ir_module: module base: loading translation file /usr/lib/python3/dist-packages/odoo/addons/base/i18n/es_419.po for language es_MX 
+2026-06-12 03:21:18,674 1 INFO None odoo.addons.base.models.ir_module: module web: loading translation file /usr/lib/python3/dist-packages/odoo/addons/web/i18n/es.po for language es_MX 
+2026-06-12 03:21:18,772 1 INFO None odoo.addons.base.models.ir_module: module web: loading translation file /usr/lib/python3/dist-packages/odoo/addons/web/i18n/es_419.po for language es_MX 
+2026-06-12 03:21:18,868 1 INFO None odoo.addons.base.models.ir_module: module base_setup: loading translation file /usr/lib/python3/dist-packages/odoo/addons/base_setup/i18n/es.po for language es_MX 
+2026-06-12 03:21:18,872 1 INFO None odoo.addons.base.models.ir_module: module base_setup: loading translation file /usr/lib/python3/dist-packages/odoo/addons/base_setup/i18n/es_419.po for language es_MX 
+2026-06-12 03:21:18,878 1 INFO None odoo.addons.base.models.ir_module: module auth_passkey: loading translation file /usr/lib/python3/dist-packages/odoo/addons/auth_passkey/i18n/es.po for language es_MX 
+2026-06-12 03:21:18,880 1 INFO None odoo.addons.base.models.ir_module: module auth_passkey: loading translation file /usr/lib/python3/dist-packages/odoo/addons/auth_passkey/i18n/es_419.po for language es_MX 
+2026-06-12 03:21:18,885 1 INFO None odoo.addons.base.models.ir_module: module auth_totp: loading translation file /usr/lib/python3/dist-packages/odoo/addons/auth_totp/i18n/es.po for language es_MX 
+2026-06-12 03:21:18,888 1 INFO None odoo.addons.base.models.ir_module: module auth_totp: loading translation file /usr/lib/python3/dist-packages/odoo/addons/auth_totp/i18n/es_419.po for language es_MX 
+2026-06-12 03:21:18,896 1 INFO None odoo.addons.base.models.ir_module: module base_import: loading translation file /usr/lib/python3/dist-packages/odoo/addons/base_import/i18n/es.po for language es_MX 
+2026-06-12 03:21:18,903 1 INFO None odoo.addons.base.models.ir_module: module base_import: loading translation file /usr/lib/python3/dist-packages/odoo/addons/base_import/i18n/es_419.po for language es_MX 
+2026-06-12 03:21:18,909 1 INFO None odoo.addons.base.models.ir_module: module base_import_module: loading translation file /usr/lib/python3/dist-packages/odoo/addons/base_import_module/i18n/es.po for language es_MX 
+2026-06-12 03:21:18,913 1 INFO None odoo.addons.base.models.ir_module: module base_import_module: loading translation file /usr/lib/python3/dist-packages/odoo/addons/base_import_module/i18n/es_419.po for language es_MX 
+2026-06-12 03:21:18,917 1 INFO None odoo.addons.base.models.ir_module: module bus: loading translation file /usr/lib/python3/dist-packages/odoo/addons/bus/i18n/es.po for language es_MX 
+2026-06-12 03:21:18,920 1 INFO None odoo.addons.base.models.ir_module: module bus: loading translation file /usr/lib/python3/dist-packages/odoo/addons/bus/i18n/es_419.po for language es_MX 
+2026-06-12 03:21:18,923 1 INFO None odoo.addons.base.models.ir_module: module html_editor: loading translation file /usr/lib/python3/dist-packages/odoo/addons/html_editor/i18n/es.po for language es_MX 
+2026-06-12 03:21:18,933 1 INFO None odoo.addons.base.models.ir_module: module html_editor: loading translation file /usr/lib/python3/dist-packages/odoo/addons/html_editor/i18n/es_419.po for language es_MX 
+2026-06-12 03:21:18,948 1 INFO None odoo.addons.base.models.ir_module: module iap: loading translation file /usr/lib/python3/dist-packages/odoo/addons/iap/i18n/es.po for language es_MX 
+2026-06-12 03:21:18,951 1 INFO None odoo.addons.base.models.ir_module: module iap: loading translation file /usr/lib/python3/dist-packages/odoo/addons/iap/i18n/es_419.po for language es_MX 
+2026-06-12 03:21:18,955 1 INFO None odoo.addons.base.models.ir_module: module web_tour: loading translation file /usr/lib/python3/dist-packages/odoo/addons/web_tour/i18n/es.po for language es_MX 
+2026-06-12 03:21:18,958 1 INFO None odoo.addons.base.models.ir_module: module web_tour: loading translation file /usr/lib/python3/dist-packages/odoo/addons/web_tour/i18n/es_419.po for language es_MX 
+2026-06-12 03:21:18,962 1 INFO None odoo.addons.base.models.ir_module: module web_unsplash: loading translation file /usr/lib/python3/dist-packages/odoo/addons/web_unsplash/i18n/es.po for language es_MX 
+2026-06-12 03:21:18,964 1 INFO None odoo.addons.base.models.ir_module: module web_unsplash: loading translation file /usr/lib/python3/dist-packages/odoo/addons/web_unsplash/i18n/es_419.po for language es_MX 
+2026-06-12 03:21:19,951 1 INFO None odoo.addons.base.models.res_users: Login successful for login:valegchemes@gmail.com from 172.18.0.1 
+2026-06-12 03:21:19,963 1 INFO None werkzeug: 172.18.0.1 - - [12/Jun/2026 03:21:19] "POST /web/database/create HTTP/1.1" 303 - 20391 8.105 9.165
+2026-06-12 03:21:19,967 1 WARNING ? odoo.http: Logged into database 'inmobiliaria_dev', but dbfilter rejects it; logging session out. 
+2026-06-12 03:21:19,973 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:21:19] "GET /odoo HTTP/1.1" 303 - 4 0.002 0.004
+2026-06-12 03:21:20,009 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 03:21:20,010 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 03:21:20,020 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 03:21:20,021 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 03:21:20,027 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc="title or 'Odoo'" in template 185. Replace by @t-out 
+2026-06-12 03:21:20,028 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='request.csrf_token(None)' in template 185. Replace by @t-out 
+2026-06-12 03:21:20,028 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='debug' in template 185. Replace by @t-out 
+2026-06-12 03:21:20,162 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:21:20] "GET /web/login?redirect=/odoo? HTTP/1.1" 200 - 45 0.014 0.170
+2026-06-12 03:21:20,177 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:21:20] "GET /web/binary/company_logo HTTP/1.1" 304 - 5 0.002 0.005
+2026-06-12 03:21:20,227 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:21:20] "GET /web/webclient/translations?hash=e253a6ad94d19461c7e9b6154d187b9f9ff65191&lang= HTTP/1.1" 200 - 5 0.004 0.006
+2026-06-12 03:21:24,198 1 INFO odoo odoo.addons.base.models.res_users: Login failed for login:valegchemes@gmail.com from 172.18.0.1 
+2026-06-12 03:21:24,224 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 03:21:24,225 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 03:21:24,235 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 03:21:24,236 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 03:21:24,241 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc="title or 'Odoo'" in template 185. Replace by @t-out 
+2026-06-12 03:21:24,242 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='request.csrf_token(None)' in template 185. Replace by @t-out 
+2026-06-12 03:21:24,243 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='debug' in template 185. Replace by @t-out 
+2026-06-12 03:21:24,384 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:21:24] "POST /web/login HTTP/1.1" 200 - 46 0.016 0.177
+2026-06-12 03:21:24,396 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:21:24] "GET /web/binary/company_logo HTTP/1.1" 304 - 5 0.003 0.004
+2026-06-12 03:21:24,430 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:21:24] "GET /web/webclient/translations?hash=e253a6ad94d19461c7e9b6154d187b9f9ff65191&lang= HTTP/1.1" 200 - 5 0.002 0.003
+2026-06-12 03:21:42,055 1 INFO odoo odoo.addons.base.models.res_users: Login failed for login:valegchemes@gmail.com from 172.18.0.1 
+2026-06-12 03:21:42,083 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 03:21:42,084 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 03:21:42,095 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 03:21:42,096 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 03:21:42,103 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc="title or 'Odoo'" in template 185. Replace by @t-out 
+2026-06-12 03:21:42,104 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='request.csrf_token(None)' in template 185. Replace by @t-out 
+2026-06-12 03:21:42,105 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='debug' in template 185. Replace by @t-out 
+2026-06-12 03:21:42,247 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:21:42] "POST /web/login HTTP/1.1" 200 - 46 0.015 0.183
+2026-06-12 03:21:42,259 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:21:42] "GET /web/binary/company_logo HTTP/1.1" 304 - 5 0.002 0.004
+2026-06-12 03:21:42,298 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:21:42] "GET /web/webclient/translations?hash=e253a6ad94d19461c7e9b6154d187b9f9ff65191&lang= HTTP/1.1" 200 - 5 0.002 0.004
+2026-06-12 03:21:47,359 1 INFO odoo odoo.addons.base.models.res_users: Login failed for login:valegchemes@gmail.com from 172.18.0.1 
+2026-06-12 03:21:47,385 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 03:21:47,386 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 03:21:47,396 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='error' in template 189. Replace by @t-out 
+2026-06-12 03:21:47,397 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='message' in template 189. Replace by @t-out 
+2026-06-12 03:21:47,404 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc="title or 'Odoo'" in template 185. Replace by @t-out 
+2026-06-12 03:21:47,405 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='request.csrf_token(None)' in template 185. Replace by @t-out 
+2026-06-12 03:21:47,407 1 WARNING odoo odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='debug' in template 185. Replace by @t-out 
+2026-06-12 03:21:47,550 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:21:47] "POST /web/login HTTP/1.1" 200 - 46 0.017 0.181
+2026-06-12 03:21:47,564 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:21:47] "GET /web/binary/company_logo HTTP/1.1" 304 - 5 0.002 0.004
+2026-06-12 03:21:47,602 1 INFO odoo werkzeug: 172.18.0.1 - - [12/Jun/2026 03:21:47] "GET /web/webclient/translations?hash=e253a6ad94d19461c7e9b6154d187b9f9ff65191&lang= HTTP/1.1" 200 - 5 0.002 0.004
+2026-06-12 03:23:44,883 1 INFO odoo odoo.service.server: Initiating shutdown 
+2026-06-12 03:23:44,884 1 INFO odoo odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-06-12 03:23:45,230 1 INFO odoo odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 4 connections  
+2026-06-12 03:23:45,232 1 INFO ? odoo.service.server: cron0 max age (0s) reached, releasing connection. 
+2026-06-12 03:23:47,252 1 WARNING ? odoo.tools.config: option db_name reads 'False' in the config file at /etc/odoo/odoo.conf but isn't a boolean option, skip 
+2026-06-12 03:23:47,252 1 WARNING ? odoo.tools.config: option log_db reads 'False' in the config file at /etc/odoo/odoo.conf but isn't a boolean option, skip 
+2026-06-12 03:23:47,252 1 WARNING ? odoo.tools.config: unknown option 'translate_modules' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 03:23:47,253 1 WARNING ? odoo.tools.config: unknown option 'longpolling_port' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 03:23:47,253 1 WARNING ? odoo.tools.config: option db_name reads 'False' in the config file at /etc/odoo/odoo.conf but isn't a boolean option, skip 
+2026-06-12 03:23:47,253 1 WARNING ? odoo.tools.config: option log_db reads 'False' in the config file at /etc/odoo/odoo.conf but isn't a boolean option, skip 
+2026-06-12 03:23:47,254 1 WARNING ? odoo.tools.config: unknown option 'translate_modules' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 03:23:47,254 1 WARNING ? odoo.tools.config: unknown option 'longpolling_port' in the config file at /etc/odoo/odoo.conf, option stored as-is, without parsing 
+2026-06-12 03:23:47,255 1 WARNING ? odoo.tools.config: missing --http-interface/http_interface, using 0.0.0.0 by default, will change to 127.0.0.1 in 20.0 
+2026-06-12 03:23:47,256 1 INFO ? odoo: Odoo version 19.0-20260609 
+2026-06-12 03:23:47,257 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-06-12 03:23:47,257 1 INFO ? odoo: addons paths: _NamespacePath(['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/19.0', '/mnt/extra-addons', '/usr/lib/python3/dist-packages/addons']) 
+2026-06-12 03:23:47,258 1 INFO ? odoo: database: odoo@db:5432 
+2026-06-12 03:23:47,714 1 INFO ? odoo.service.server: Watching addons folder /usr/lib/python3/dist-packages/odoo/addons 
+2026-06-12 03:23:47,715 1 INFO ? odoo.service.server: Watching addons folder /var/lib/odoo/addons/19.0 
+2026-06-12 03:23:47,716 1 INFO ? odoo.service.server: Watching addons folder /mnt/extra-addons 
+2026-06-12 03:23:47,716 1 INFO ? odoo.service.server: Watching addons folder /usr/lib/python3/dist-packages/addons 
+2026-06-12 03:24:34,814 1 INFO ? odoo.service.server: AutoReload watcher running with watchdog 
+2026-06-12 03:24:34,814 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 4fa88078808c:8069 
+2026-06-12 03:25:22,721 1 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-06-12 03:25:22,724 1 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-06-12 03:25:22,733 1 INFO ? odoo.modules.loading: loading 14 modules... 
+2026-06-12 03:25:23,082 1 INFO ? odoo.modules.loading: 14 modules loaded in 0.35s, 0 queries (+0 extra) 
+2026-06-12 03:25:23,109 1 INFO ? odoo.modules.loading: Modules loaded. 
+2026-06-12 03:25:23,122 1 INFO ? odoo.registry: Registry loaded in 0.418s 
+2026-06-12 03:25:23,125 1 INFO inmobiliaria_dev odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-06-12 03:25:23,140 1 INFO inmobiliaria_dev werkzeug: 127.0.0.1 - - [12/Jun/2026 03:25:23] "GET / HTTP/1.1" 303 - 26 0.036 0.424
+2026-06-12 03:25:34,886 1 INFO inmobiliaria_dev odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) starting 
+2026-06-12 03:25:34,945 1 INFO inmobiliaria_dev odoo.addons.base.models.res_users: GC 'auth_totp.device' delete 0 entries 
+2026-06-12 03:25:35,034 1 INFO inmobiliaria_dev odoo.addons.api_doc.models.ir_attachment: GC'd 0 /doc cached index 
+2026-06-12 03:25:35,049 1 INFO inmobiliaria_dev odoo.addons.base.models.res_users: GC'd 0 user log entries 
+2026-06-12 03:25:35,058 1 INFO inmobiliaria_dev odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-06-12 03:25:35,078 1 INFO inmobiliaria_dev odoo.addons.base.models.res_users: GC 'res.users.apikeys' delete 0 entries 
+2026-06-12 03:25:35,103 1 INFO inmobiliaria_dev odoo.addons.base.models.ir_attachment: filestore gc 10 checked, 0 removed 
+2026-06-12 03:25:35,111 1 INFO inmobiliaria_dev odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-06-12 03:25:35,147 1 INFO inmobiliaria_dev odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) fully done (#loop 1; done 0; remaining 0; duration 0.26s) 
+2026-06-12 03:25:35,156 1 INFO inmobiliaria_dev odoo.addons.base.models.ir_cron: Job 'Base: Portal Users Deletion' (2) starting 
+2026-06-12 03:25:35,175 1 INFO inmobiliaria_dev odoo.addons.base.models.ir_cron: Job 'Base: Portal Users Deletion' (2) fully done (#loop 1; done 0; remaining 0; duration 0.02s) 
+2026-06-12 03:25:43,557 1 WARNING ? odoo.http: Logged into database 'odoo', but dbfilter rejects it; logging session out. 
+2026-06-12 03:25:43,566 1 WARNING inmobiliaria_dev odoo.http: CSRF validation failed on path '/web/login' 
+2026-06-12 03:25:43,568 1 INFO inmobiliaria_dev werkzeug: 172.18.0.1 - - [12/Jun/2026 03:25:43] "POST /web/login HTTP/1.1" 400 - 6 0.004 0.111
+2026-06-12 03:25:46,813 1 WARNING ? odoo.http: Logged into database 'odoo', but dbfilter rejects it; logging session out. 
+2026-06-12 03:25:46,818 1 WARNING inmobiliaria_dev odoo.http: CSRF validation failed on path '/web/login' 
+2026-06-12 03:25:46,820 1 INFO inmobiliaria_dev werkzeug: 172.18.0.1 - - [12/Jun/2026 03:25:46] "POST /web/login HTTP/1.1" 400 - 5 0.005 0.012
+2026-06-12 03:29:41,790 1 INFO ? odoo.service.server: Initiating shutdown 
+2026-06-12 03:29:41,792 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-06-12 03:29:42,086 1 INFO ? odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 5 connections  
+2026-06-12 03:29:42,088 1 INFO ? odoo.service.server: cron0 max age (0s) reached, releasing connection. 

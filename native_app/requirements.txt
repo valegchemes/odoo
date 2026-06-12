@@ -1,0 +1,14 @@
+# Odoo Inmobiliaria - App Nativa Windows
+# pip install -r requirements.txt
+
+# Frontend nativo
+pywebview[webview2]>=5.0
+
+# Backend
+psycopg2-binary>=2.9.9
+
+# Compilación
+pyinstaller>=6.0.0
+
+# Utilidades
+pillow>=10.0.0  # Para icono
